@@ -1,0 +1,122 @@
+#chainup {
+  padding: 100px 0px;
+  // &.type-two {
+  //   background: #ff9e60;
+  // }
+  // &.type-three {
+  //   background: #ffae34;
+  // }
+  // &.type-four {
+  //   background: #5482ff;
+  // }
+  // &.type-five {
+  //   background: #6e8df8;
+  // }
+  // &.type-six {
+  //   background: #fe5476;
+  // }
+  // &.type-seven {
+  //   background: #ef4b4c;
+  // }
+  // &.type-eight {
+  //   background: #c41b6c;
+  // }
+  // &.type-nine {
+  //   background: #6e8df8;
+  // }
+  // &.type-10 {
+  //   background: #5a8fe9;
+  // }
+  // &.type-11 {
+  //   background: #ef4b4c;
+  // }
+  // &.type-12 {
+  //   background: #d44f4a;
+  // }
+  // &.type-13 {
+  //   background: #ff9900;
+  // }
+  // &.type-14 {
+  //   background: #ef4b4c;
+  // }
+  // &.type-15 {
+  //   background: #c41b6c;
+  // }
+  // &.type-16 {
+  //   background: #24a5e7;
+  // }
+  // &.type-17 {
+  //   background: #00b1e7;
+  // }
+  .container {
+    .chainup-wrapper {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      gap: 40px;
+      align-items: center;
+      @media screen and (max-width: 1080px) {
+        grid-template-columns: 1fr;
+        .chainup-col:nth-child(1) {
+          grid-row: 2;
+        }
+        .chainup-col:nth-child(2) {
+          grid-row: 1;
+        }
+      }
+    }
+    .chainup-img img {
+      width: 100%;
+    }
+    .chainup {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      margin-top: 50px;
+      .chainup-card {
+        text-align: center;
+        color: #000;
+        margin: 80px 40px 40px 40px ;
+        background: #ffffff;
+        border: 1px solid #f2f2f2;
+        box-shadow: 0px 27.11px 49.06px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 100px 20px 20px 20px;
+        
+      }
+      .chainup-icon{
+        position: absolute;
+        top: -40px;
+      }
+      .chainup-icon img {
+        width: 80%;
+    }
+      p.count {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+      .col-2:first-child {
+        border-bottom: 1px solid #000;
+        border-right: 1px solid #000;
+      }
+      .col-2:nth-child(2) {
+        border-bottom: 1px solid #000;
+      }
+      .col-2:nth-child(3) {
+        border-right: 1px solid #000;
+      }
+      @media screen and (max-width: 580px) {
+        grid-template-columns: 1fr;
+        .col-2:first-child,
+        .col-2:nth-child(2),
+        .col-2:nth-child(3) {
+          border: none;
+        }
+      }
+    }
+  }
+}
