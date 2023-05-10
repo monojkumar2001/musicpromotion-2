@@ -3,27 +3,54 @@ import AppLayout from "@components/layout/AppLayout";
 import ServiceSection from "@components/sections/ServiceSection";
 import VisionSection from "@components/sections/VisionSection";
 import AboutSection from "@components/sections/ChainUpSection";
-import FaqSectionSoundCloud from "@components/sections/FaqSectionSoundCloud";
-import ReviewSection from "@components/sections/ReviewSection";
-import VideoIntroSection from "@components/sections/VideoIntroSection";
 import PricingSection from "@components/sections/PricingSection";
 import ImageSection from "@components/sections/ImageSection";
 import EngageSection from "@components/sections/EngageSection";
+import HowItWork from "@components/sections/HowItWork";
+import Agencies from "@components/sections/Agencies";
+import Follower from "@components/sections/Follower";
+import ContactUs from "@components/sections/ContactUs";
+import Registration from "@components/sections/Registration";
+import LinkedinSales from "@components/sections/LinkedinSales";
+import Faq from "react-faq-component";
 
 // Images
 
 const Page2 = () => {
+    // =========== Faq Question Data ===================
+    const data = {
+      rows: [
+        {
+          title: "Metaverse development: what is it?",
+          content: `You can design your own virtual world setting to hold conventions, meetings, seminars, concerts, or even to start your own real-world company there.`,
+        },
+        {
+          title: "How much does our metaverse development service cost?",
+          content: `To get a price on your metaverse development project, get in touch with our team. Your specified features, functionalities, and other factors will affect the price. `,
+        },
+        {
+          title: "What are the benefits of investing in metaverse platforms?",
+          content: `Experts claim that the metaverse has a trillion-dollar industry thus has a promising future. If you work in such a growing field, you will be noticed by others. Be a pioneer in the field!`,
+        },
+        {
+          title: "What can a metaverse development company do for you?",
+          content: `What can a metaverse development company do for you?`,
+        },
+      ],
+    };
+  
+    const styles = {
+      titleTextColor: "blue",
+      rowTitleColor: "blue",
+    };
   return (
     <div id="page2">
+      {/* ====================== Hero Section =========== */}
       <div className="banner-container">
         <div className="banner-wrapper">
           <div className="banner-inner">
             <div className="col">
               <div className="banner-content">
-                {/* <div className="bg-sheap">
-									<img src="/assets/home-2/img/icon/2.png" alt="" />
-								</div> */}
-
                 <p className="sm-title">Stunning</p>
                 <h1 className="banner-title">
                   Targeted <span className="focus">SoundCloud</span> <br />
@@ -89,15 +116,39 @@ const Page2 = () => {
           </div>
         </div>
       </div>
-
+      {/* =============== Service Section ================= */}
       <ServiceSection type="two" />
-      <VisionSection  type="two"/>
+      {/* =============== Vision Section ================== */}
+      <VisionSection type="two" />
+      {/* =============== About Section =================== */}
       <AboutSection type="two" />
+      {/* =============== Pricing Section ================= */}
       <PricingSection data={pricingData} type="two" />
-      <ImageSection />
-      <EngageSection />
-      <FaqSectionSoundCloud type="two"  />
-      <ReviewSection type="two" />
+      {/* =============== Image Section =================== */}
+      <ImageSection type="two" />
+      {/* =============== Engage Section ================== */}
+      <EngageSection type="two" />
+      {/* =============== How It Work ===================== */}
+      <HowItWork type="two" />
+      {/* =================== Agencies ==================== */}
+      <Agencies type="two" />
+      {/* =============== Follower ======================== */}
+      <Follower type="two" />
+      {/* =============== Linkedin Sales ================== */}
+      <LinkedinSales type="two" />
+      {/*  ========= Faq Section start ======== */}
+      <section id="faq">
+        <div className="container">
+          <h1 className="heading">Frequently Asked Questions</h1>
+          <div className="content">
+            <Faq data={data} styles={styles} />
+          </div>
+        </div>
+      </section>
+      {/* ============  Contact Us ===================== */}
+      <ContactUs type="two" />
+      {/* ============  Resgistration =================== */}
+      <Registration type="two" />
     </div>
   );
 };

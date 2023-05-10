@@ -1,8 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y, EffectCoverflow } from "swiper";
 import "swiper/swiper-bundle.min.css";
-// import 'swiper/css/autoplay';
-// import './slider.css';
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 const LinkedinSales = ({ data, type = "one" }) => {
   return (

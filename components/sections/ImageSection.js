@@ -1,9 +1,9 @@
 import Image from "next/image";
 import image1 from "@assets/image-1.png";
 
-const ImageSection = () => {
+const ImageSection = ({ type = "one" }) => {
 	return (
-		<div className="section-image">
+		<div className={`section-image type-${type}`}>
 			<div className="section-img-content-warpper">
 				<h1 className="section-title">Want a Subscription</h1>
 				<p>We also offer Pay As You Go credits on the platform which do not require to subscribe. We also offer plans to extract up to 500k leads per month.</p>

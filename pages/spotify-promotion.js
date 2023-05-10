@@ -3,20 +3,50 @@ import AppLayout from "@components/layout/AppLayout";
 import ServiceSection from "@components/sections/ServiceSection";
 import VisionSection from "@components/sections/VisionSection";
 import AboutSection from "@components/sections/ChainUpSection";
-import FaqSectionSoundCloud from "@components/sections/FaqSectionSoundCloud";
-import ReviewSection from "@components/sections/ReviewSection";
-import VideoIntroSection from "@components/sections/VideoIntroSection";
 import PricingSection from "@components/sections/PricingSection";
 import ImageSection from "@components/sections/ImageSection";
 import EngageSection from "@components/sections/EngageSection";
 import HowItWork from "@components/sections/HowItWork";
+import Agencies from "@components/sections/Agencies";
+import Follower from "@components/sections/Follower";
+import ContactUs from "@components/sections/ContactUs";
+import Registration from "@components/sections/Registration";
+import LinkedinSales from "@components/sections/LinkedinSales";
+import Faq from "react-faq-component";
 
 // Images
 
 const Page1 = () => {
+  // =========== Faq Question Data ===================
+  const data = {
+    rows: [
+      {
+        title: "Metaverse development: what is it?",
+        content: `You can design your own virtual world setting to hold conventions, meetings, seminars, concerts, or even to start your own real-world company there.`,
+      },
+      {
+        title: "How much does our metaverse development service cost?",
+        content: `To get a price on your metaverse development project, get in touch with our team. Your specified features, functionalities, and other factors will affect the price. `,
+      },
+      {
+        title: "What are the benefits of investing in metaverse platforms?",
+        content: `Experts claim that the metaverse has a trillion-dollar industry thus has a promising future. If you work in such a growing field, you will be noticed by others. Be a pioneer in the field!`,
+      },
+      {
+        title: "What can a metaverse development company do for you?",
+        content: `What can a metaverse development company do for you?`,
+      },
+    ],
+  };
+
+  const styles = {
+    titleTextColor: "blue",
+    rowTitleColor: "blue",
+  };
   return (
-<>
-        <div className="page-1">
+    <>
+      {/* ====================== Hero Section =========== */}
+      <div className="page-1">
         <div className="banner-wrapper">
           <div className="banner-inner">
             <div className="col">
@@ -92,25 +122,51 @@ const Page1 = () => {
             </div>
           </div>
         </div>
-
-        </div>
-      <ServiceSection type="two" />
-      <VisionSection  type="two"/>
-      <AboutSection type="two" />
-      <PricingSection data={pricingData} type="two" />
-      <ImageSection />
+     
+      {/* =============== Service Section ================= */}
+      <ServiceSection />
+      {/* =============== Vision Section ================== */}
+      <VisionSection />
+      {/* =============== About Section =================== */}
+      <AboutSection />
+      {/* =============== Pricing Section ================= */}
+      <PricingSection data={pricingData} type="one" />
+      {/* =============== Image Section =================== */}
+      <ImageSection type="one"/>
+      {/* =============== Engage Section ================== */}
       <EngageSection />
-      <HowItWork/>
-      {/* <FaqSectionSoundCloud type="two"  /> */}
-      {/* <ReviewSection type="two" /> */}
-      </>
+      {/* =============== How It Work ===================== */}
+      <HowItWork />
+      {/* =================== Agencies ==================== */}
+      <Agencies />
+      {/* =============== Follower ======================== */}
+      <Follower />
+      {/* =============== Linkedin Sales ================== */}
+      <LinkedinSales />
+      {/*  ========= Faq Section start ======== */}
+      <section id="faq">
+        <div className="container">
+          <h1 className="heading">Frequently Asked Questions</h1>
+          <div className="content">
+            <Faq data={data} styles={styles} />
+          </div>
+        </div>
+      </section>
+      {/* ============  Contact Us ===================== */}
+      <ContactUs />
+      {/* ============  Resgistration =================== */}
+      <Registration />
+      </div>
+    </>
   );
 };
+
+// ================== Priching Data ====================
 
 const pricingData = [
   {
     package_type: "basic",
-    package_dis:"Crafted for high touch sales teams",
+    package_dis: "Crafted for high touch sales teams",
     cur_price: "69",
     package_lead: "2000",
     percent: "50",
@@ -128,9 +184,9 @@ const pricingData = [
   },
   {
     package_type: "Standard",
-    package_dis:"Crafted for high touch sales teams",
+    package_dis: "Crafted for high touch sales teams",
     cur_price: "119",
-    package_lead : "2000",
+    package_lead: "2000",
     percent: "50",
     includes: [
       "Reach 30k Audience Base",
@@ -146,7 +202,7 @@ const pricingData = [
   },
   {
     package_type: "premium",
-    package_dis:"Crafted for high touch sales teams",
+    package_dis: "Crafted for high touch sales teams",
     cur_price: "299",
     package_lead: "2000",
     percent: "50",

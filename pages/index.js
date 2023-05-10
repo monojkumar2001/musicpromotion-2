@@ -1,17 +1,5 @@
-import Image from "next/image";
-import image1 from "../public/assets/image-1.png";
-import image2 from "../public/assets/image-2.png";
 // Layout and components
 import AppLayout from "@components/layout/AppLayout";
-import ServiceSection from "@components/sections/ServiceSection";
-import VisionSection from "@components/sections/VisionSection";
-import AboutSection from "@components/sections/ChainUpSection";
-import FaqSection from "@components/sections/FaqSection";
-import ReviewSection from "@components/sections/ReviewSection";
-import VideoIntroSection from "@components/sections/VideoIntroSection";
-import PricingSection from "@components/sections/PricingSection";
-import ImageSection from "@components/sections/ImageSection";
-import EngageSection from "@components/sections/EngageSection";
 import Link from "next/link";
 import ProvideCount from "@components/sections/ProvideCount";
 import WhyUs from "@components/sections/WhyUs";
@@ -25,6 +13,7 @@ import LinkedinSales from "@components/sections/LinkedinSales";
 import Faq from "react-faq-component";
 import ContactUs from "@components/sections/ContactUs";
 import Registration from "@components/sections/Registration";
+// import CountUp from "react-countup";
 // Images
 
 const Home = () => {
@@ -54,7 +43,9 @@ const Home = () => {
     rowTitleColor: "blue",
   };
   return (
+    
     <div id="home">
+      {/*  ================ Hero Section ==============*/}
       <div className="hero">
         <div className="banner-wrapper">
           <div className="banner-inner">
@@ -82,15 +73,23 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* =================== Provide Count =============== */}
       <ProvideCount />
+      {/* ================== Why Us  */}
       <WhyUs />
-      <Services type="one" />
-      <ChainUpSection type="one" />
+      {/* =================  Service ====================== */}
+      <Services />
+      {/* ================= Chain Up Section ============== */}
+      <ChainUpSection />
+      {/* ================= SongFly ======================= */}
       <SongFly />
+      {/* ================== Recognized ==================== */}
       <Recognized />
+      {/* ============== Marketing Agenchy ================ */}
       <MarketingAgenchy />
+      {/* =============== Linkedin Sales ================== */}
       <LinkedinSales />
-      {/*  ========= Faq Section start ======== */}
+      {/*  ============== Faq Section start ============== */}
       <section id="faq">
         <div className="container">
           <h1 className="heading">Frequently Asked Questions</h1>
@@ -99,12 +98,10 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/*  ========= Faq Section End ======== */}
-
-      {/* ===========  Contact Us start ================== */}
-      <ContactUs/>
-      {/* ===========  Contact Us End ================== */}
-      <Registration/>
+      {/* ============  Contact Us ===================== */}
+      <ContactUs />
+      {/* ============  Resgistration =================== */}
+      <Registration />
     </div>
   );
 };
@@ -113,57 +110,3 @@ Home.title = "Music Promotion Home";
 Home.layout = AppLayout;
 
 export default Home;
-
-// const pricingData = [
-//   {
-//     package_type: "basic",
-//     cur_price: "69",
-//     off_price: "139 ",
-//     percent: "50",
-//     includes: [
-//       "Reach 10k Audience Base",
-//       "Distribution To 100 Curators",
-//       "Distribution To 100 Playlists",
-//       "Distribution To 100 Radios",
-//       "Unlimited Revisions",
-//       "Start Within 24 hours",
-//       "2-3 Days Delivery",
-//     ],
-//     details:
-//       "Engagement may vary.*Typical engagements on average 5,000 streams and 700 followers organically",
-//   },
-//   {
-//     package_type: "Standard",
-//     cur_price: "119",
-//     off_price: "239",
-//     percent: "50",
-//     includes: [
-//       "Reach 30k Audience Base",
-//       "Distribution To 250 Curators",
-//       "Distribution To 250 Playlists",
-//       "Distribution To 250 Radios",
-//       "Unlimited Revisions",
-//       "Start Within 24 hours",
-//       "3-5 Days Delivery",
-//     ],
-//     details:
-//       "Engagement may vary.*Typical engagements on average 15,000 streams and 1800 followers organically",
-//   },
-//   {
-//     package_type: "premium",
-//     cur_price: "299",
-//     off_price: "499",
-//     percent: "50",
-//     includes: [
-//       "Reach 100k Audience Base",
-//       "Distribution To 550 Curators",
-//       "Distribution To 550 Playlists",
-//       "Distribution To 550 Radios",
-//       "Unlimited Revisions",
-//       "Start Within 24 hours",
-//       "9-10 Days Delivery",
-//     ],
-//     details:
-//       "Engagement may vary.*Typical engagements on average 50,000 streams and 10000 followers organically",
-//   },
-// ];

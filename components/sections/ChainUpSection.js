@@ -1,4 +1,4 @@
-import CountUp from "react-countup";
+// import CountUp from "react-countup";
 
 const ChainUpSection = ({ type = "one" }) => {
 	return (
@@ -19,7 +19,7 @@ const ChainUpSection = ({ type = "one" }) => {
 									<img src="/assets/home-1/img/chainup-icon-1.svg" alt="" />
 									</div>
 									<p className="count">
-										<CountUp end={6} duration={2} />
+										{/* <CountUp end={6} duration={2} /> */}
 										+
 									</p>
 									<p>Playlist Creators</p>
@@ -31,7 +31,7 @@ const ChainUpSection = ({ type = "one" }) => {
 									<img src="/assets/home-1/img/chainup-icon-2.svg" alt="" />
 									</div>
 									<p className="count">
-										<CountUp end={56} duration={2} />
+										{/* <CountUp end={56} duration={2} /> */}
 										+
 									</p>
 									<p>Playlist Creators</p>
@@ -43,7 +43,7 @@ const ChainUpSection = ({ type = "one" }) => {
 									<img src="/assets/home-1/img/chainup-icon-3.svg" alt="" />
 									</div>
 									<p className="count">
-										<CountUp end={140} duration={2} />
+										{/* <CountUp end={140} duration={2} /> */}
 										+
 									</p>
 									<p>Playlist Creators</p>
@@ -55,7 +55,7 @@ const ChainUpSection = ({ type = "one" }) => {
 									<img src="/assets/home-1/img/chainup-icon-4.svg" alt="" />
 									</div>
 									<p className="count">
-										<CountUp end={28000} duration={2} />
+										{/* <CountUp end={28000} duration={2} /> */}
 										+
 									</p>
 									<p>Playlist Creators</p>
