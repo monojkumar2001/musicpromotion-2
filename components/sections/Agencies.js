@@ -1,8 +1,8 @@
 import React from "react";
 
-function Agencies() {
+function Agencies({ type = "one" }) {
   return (
-    <div className="agencies">
+    <div className={`agencies type-${type}`}>
       <div className="container">
         <div className="agencies-wrapper">
           <div className="agencies-content-warpper">

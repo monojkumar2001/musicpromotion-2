@@ -236,6 +236,7 @@ font-weight: 600;
 color: #fff;
 }
 
+
 // ======================== Recognized ======================
 .recognized{
     padding:100px 0 100px 0;
@@ -282,7 +283,6 @@ margin-top: 100px;
 }
 .next, .prev {
     color: var(--white-color);
-    background: #1DB954;
     width: 50px;
     height: 50px;
     display: flex;
@@ -314,7 +314,6 @@ gap: 20px;
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 8px solid #1DB954;
 }
 .linkedin-sales-profile img{
     border-radius: 50%;
@@ -345,6 +344,62 @@ gap: 20px;
     align-items: center;
     gap: 10px;
 }
+.type-one {
+    .next, .prev {
+        background: #1DB954;
+    }
+    .linkedin-sales-profile{
+        border: 8px solid #1DB954;
+    }
+    .linkedin-sales-star svg path{
+        fill: #1DB954;
+    }
+    .linkedin-sales-arrow-img{
+        background-color:#1DB954;
+    }
+}
+.type-two {
+    .next, .prev {
+        background: #FF8435;
+    }
+    .linkedin-sales-profile{
+        border: 8px solid #FF8435;
+    }
+    .linkedin-sales-star svg path{
+        fill: #FF8435;
+    }
+    .linkedin-sales-arrow-img{
+        background-color:#FF8435;
+    }
+}
+.type-three {
+    .next, .prev {
+        background: #FF9900;
+    }
+    .linkedin-sales-profile{
+        border: 8px solid #FF9900;
+    }
+    .linkedin-sales-star svg path{
+        fill: #FF9900;
+    }
+    .linkedin-sales-arrow-img{
+        background-color:#FF9900;
+    }
+}
+.type-four {
+    .next, .prev {
+        background: #EF4B4C;
+    }
+    .linkedin-sales-profile{
+        border: 8px solid #EF4B4C;
+    }
+    .linkedin-sales-star svg path{
+        fill: #EF4B4C;
+    }
+    .linkedin-sales-arrow-img{
+        background-color:#EF4B4C;
+    }
+}
 
 // ================ Faq Section ============
 // ================ contact us section ===========
@@ -354,7 +409,6 @@ gap: 20px;
 }
 .contact-us-wrapper{
     position: relative;
-background: #1DB954;
 border-radius: 30px;
 padding: 80px 0 50px 0;
 margin: auto;
@@ -390,7 +444,6 @@ margin-top: 30px;
     height: 100px;
     background: #FFFFFF;
     border-radius: 50%;
-    border: 5px solid #1DB954;
     position: absolute;
     top: -50px;
     display: flex;
@@ -411,6 +464,50 @@ margin-top: 30px;
     position: absolute;
 }
 
+.type-one {
+    .contact-us-wrapper{
+    background: #1DB954;
+    }
+    .contact-us-logo{
+        border: 5px solid #1DB954;
+    }
+    .contact-us-btn{
+    color: #1DB954;
+    }
+}
+.type-two {
+    .contact-us-wrapper{
+    background: #FF8435;
+    }
+    .contact-us-logo{
+        border: 5px solid #FF8435;
+    }
+    .contact-us-btn{
+    color: #FF8435;
+    }
+}
+.type-three {
+    .contact-us-wrapper{
+    background: #FF9900;
+    }
+    .contact-us-logo{
+        border: 5px solid #FF9900;
+    }
+    .contact-us-btn{
+    color: #FF9900;
+    }
+}
+.type-four {
+    .contact-us-wrapper{
+    background: #EF4B4C;
+    }
+    .contact-us-logo{
+        border: 5px solid #EF4B4C;
+    }
+    .contact-us-btn{
+    color: #EF4B4C;
+    }
+}
 // ================ Registration ==========
 
 .registration-input{

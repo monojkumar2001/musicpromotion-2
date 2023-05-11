@@ -1,7 +1,6 @@
 .follower{
     padding: 50px 0 80px 0;
     margin-bottom: 100px;
-    background-color: #1DB954;
 }
 .follower-content-warpper {
     width: 60%;
@@ -47,4 +46,25 @@
 }
 .follower-icon-img img{
     width: 100%;
+}
+
+.type-one{
+    .follower{
+        background-color: #1DB954;
+    }
+}  
+.type-two {
+    .follower{
+        background-color: #FF8435;
+    }
+}
+.type-three {
+    .follower{
+        background-color: #FF9900;
+    }
+}
+.type-four {
+    .follower{
+        background-color: #EF4B4C;
+    }
 }

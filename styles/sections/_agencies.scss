@@ -16,7 +16,6 @@
     border-left: 1px solid rgba(0, 0, 0, 0.5);
 }
 .agencies-table .table thead tr{
-    background: #1DB954;
 padding: 15px 0;
 text-align: start;
 }
@@ -36,8 +35,40 @@ background: #F4F4F4;
 border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 .table-redio-box{
-    background: #1DB954;
     border-radius: 50%;
     width: 15px;
     height: 15px;
+}
+
+.type-one {
+    .agencies-table .table thead tr{
+        background: #1DB954;
+    }
+    .table-redio-box{
+        background: #1DB954;
+    }
+}
+.type-two {
+    .agencies-table .table thead tr{
+        background: #FF8435;
+    }
+    .table-redio-box{
+        background: #FF8435;
+    }
+}
+.type-three {
+    .agencies-table .table thead tr{
+        background: #FF9900;
+    }
+    .table-redio-box{
+        background: #FF9900;
+    }
+}
+.type-four {
+    .agencies-table .table thead tr{
+        background: #EF4B4C;
+    }
+    .table-redio-box{
+        background: #EF4B4C;
+    }
 }

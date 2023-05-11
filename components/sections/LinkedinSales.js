@@ -4,7 +4,7 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/components/effect-coverflow/effect-coverflow.min.css";
 const LinkedinSales = ({ data, type = "one" }) => {
   return (
-    <div className="services">
+    <div className={`services type-${type}`}>
       <div className="container">
         <div className="title-wrapper">
           <h1 className="section-title">

@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { Component } from 'react';
 // import CountUp from "react-countup";
 const ProvideCount = ({ type = "one" }) => {
 	return (

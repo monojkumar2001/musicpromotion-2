@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-function HowItWork() {
+function HowItWork({ type = "one" }) {
   const [isHovering, setIsHovering] = useState(1);
   return (
-    <section className="business-grow cpt-6">
+    <section className={`business-grow type-${type}`}>
       <div className="container">
         <div className="business-warrper">
           <div className="business-left">

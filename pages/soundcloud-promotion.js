@@ -13,6 +13,7 @@ import ContactUs from "@components/sections/ContactUs";
 import Registration from "@components/sections/Registration";
 import LinkedinSales from "@components/sections/LinkedinSales";
 import Faq from "react-faq-component";
+import SongFly from "@components/sections/SongFly";
 
 // Images
 
@@ -134,6 +135,8 @@ const Page2 = () => {
       <Agencies type="two" />
       {/* =============== Follower ======================== */}
       <Follower type="two" />
+      {/* =============== Song Fly ======================== */}
+          <SongFly type="two"/>
       {/* =============== Linkedin Sales ================== */}
       <LinkedinSales type="two" />
       {/*  ========= Faq Section start ======== */}

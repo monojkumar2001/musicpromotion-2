@@ -1,9 +1,10 @@
 import React from "react";
 
-function Follower() {
+function Follower({ type = "one" }) {
   return (
-    <div className="follower">
-      <div className="container">
+    <div className={` type-${type}`}>
+     <div className="follower">
+     <div className="container">
         <div className="follower-wrapper">
           <div className="follower-content-warpper">
             <h1 className="section-title">
@@ -36,6 +37,7 @@ function Follower() {
           </div>
         </div>
       </div>
+     </div>
     </div>
   );
 }

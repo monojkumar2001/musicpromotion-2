@@ -13,6 +13,7 @@ import ContactUs from "@components/sections/ContactUs";
 import Registration from "@components/sections/Registration";
 import LinkedinSales from "@components/sections/LinkedinSales";
 import Faq from "react-faq-component";
+import SongFly from "@components/sections/SongFly";
 
 const Page3 = () => {
   // =========== Faq Question Data ===================
@@ -91,6 +92,8 @@ const Page3 = () => {
       <Agencies type="three" />
       {/* =============== Follower ======================== */}
       <Follower type="three" />
+       {/* =============== Song Fly ======================== */}
+       <SongFly type="three"/>
       {/* =============== Linkedin Sales ================== */}
       <LinkedinSales type="three" />
       {/*  ========= Faq Section start ======== */}
