@@ -1,5 +1,5 @@
-import AppLayout from "@components/layout/AppLayout";
-import PaymentInformation from "@components/sections/PaymentInformation";
+import AppLayout from "../components/layout/AppLayout";
+import PaymentInformation from "../components/sections/PaymentInformation";
 import OrderPlan from "../components/sections/OrderPlan";
 function Payment() {
   return (

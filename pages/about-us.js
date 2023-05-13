@@ -1,6 +1,4 @@
-import AppLayout from "@components/layout/AppLayout";
-import React from "react";
-
+import AppLayout from "../components/layout/AppLayout";
 const AboutUs = () => {
 	return (
 		<div className="about-us">

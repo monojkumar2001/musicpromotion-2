@@ -1,8 +1,5 @@
-import AppLayout from "@components/layout/AppLayout";
-import React from "react";
+import AppLayout from "../components/layout/AppLayout";
 import { useState } from "react";
-import Link from "next/link";
-
 const FortgotPasswordPage = () => {
 	const [type, setType] = useState("text");
 	const toggleType = () => {
@@ -23,17 +20,11 @@ const FortgotPasswordPage = () => {
 			</div>
 			<div className="forgot-right">
 					<h1 className="heading">
-					{/* Forgot <span className="focus">Password</span> */}
 					Forgot Password
 				</h1>
 				<p className="body-text">
 					Please enter your <strong>email address </strong>or{" "}
 					<strong>phone number</strong> to reset your password
-{/* 
-Enter the email address you used when you joined and we’ll send you instructions to reset your password.
-<br/>
-
-For security reasons, we do NOT store your password. So rest assured that we will never send your password via email. */}
 				</p>
 				<form className="forgot-password-form">
 					<div className="form-field">

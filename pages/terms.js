@@ -1,5 +1,4 @@
-import React from "react";
-import AppLayout from "@components/layout/AppLayout";
+import AppLayout from "../components/layout/AppLayout";
 function terms() {
   return (
     <div className="terms">

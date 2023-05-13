@@ -1,18 +1,18 @@
 // Layout and components
-import AppLayout from "@components/layout/AppLayout";
+import AppLayout from "../components/layout/AppLayout";
 import Link from "next/link";
-import ProvideCount from "@components/sections/ProvideCount";
-import WhyUs from "@components/sections/WhyUs";
-import Services from "@components/sections/Services";
-import ChainUpSection from "@components/sections/ChainUpSection";
-import SongFly from "@components/sections/SongFly";
-import Recognized from "@components/sections/Recognized";
-import MarketingAgenchy from "@components/sections/MarketingAgenchy";
-import LinkedinSales from "@components/sections/LinkedinSales";
+import ProvideCount from "../components/sections/ProvideCount";
+import WhyUs from "../components/sections/WhyUs";
+import Services from "../components/sections/Services";
+import ChainUpSection from "../components/sections/ChainUpSection";
+import SongFly from "../components/sections/SongFly";
+import Recognized from "../components/sections/Recognized";
+import MarketingAgenchy from "../components/sections/MarketingAgenchy";
+import LinkedinSales from "../components/sections/LinkedinSales";
 
 import Faq from "react-faq-component";
-import ContactUs from "@components/sections/ContactUs";
-import Registration from "@components/sections/Registration";
+import ContactUs from "../components/sections/ContactUs";
+import Registration from "../components/sections/Registration";
 // import CountUp from "react-countup";
 // Images
 

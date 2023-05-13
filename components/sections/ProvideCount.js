@@ -1,6 +1,5 @@
-
+import { CountUp } from 'use-count-up'
 import React, { Component } from 'react';
-// import CountUp from "react-countup";
 const ProvideCount = ({ type = "one" }) => {
 	return (
 	
@@ -13,21 +12,21 @@ const ProvideCount = ({ type = "one" }) => {
           <div className="provide-count-item">
           <div className="provide-count-list">
             <p className="count">
-            {/* <CountUp end={100} duration={2} /> */}
+            <CountUp isCounting end={100} duration={3} />
             <span className="provide-count-span">+</span>
             </p>
             <span>Artist</span>
           </div>
           <div className="provide-count-list">
             <p className="count">
-            {/* <CountUp end={5} duration={2} /> */}
+            <CountUp isCounting end={5} duration={3} />
             m<span className="provide-count-span">+</span>
             </p>
             <span>Songs</span>
           </div>
           <div className="provide-count-list">
             <p className="count">
-            {/* <CountUp end={50} duration={2} /> */}
+            <CountUp isCounting end={50} duration={3} />
             <span className="provide-count-span">+</span>
             </p>
             <span>Albums</span>

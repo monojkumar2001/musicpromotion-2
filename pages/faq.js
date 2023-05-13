@@ -1,6 +1,6 @@
-import Accordion from "@components/accordion/Accordion";
-import AccordionHeader from "@components/accordion/AccordionHeader";
-import AppLayout from "@components/layout/AppLayout";
+import Accordion from "../components/accordion/Accordion";
+import AccordionHeader from "../components/accordion/AccordionHeader";
+import AppLayout from "../components/layout/AppLayout";
 import React from "react";
 
 const FaqPage = () => {
@@ -23,15 +23,6 @@ const FaqPage = () => {
 					</div>
 				</div>
 				<div className="questions">
-					{/* {[1, 2, 3, 4].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>How will you promote my music?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))} */}
 					{[1].map((item) => (
 						<Accordion key={item}>
 							<AccordionHeader>How will you promote my music?</AccordionHeader>

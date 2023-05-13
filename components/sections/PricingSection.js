@@ -1,6 +1,6 @@
-import PackageCard from "@components/cards/PackageCard";
-import CustomSlider from "@components/CustomSlider";
-import PackageSlider from "@components/slider/PackageSlider";
+
+import CustomSlider from "../components/CustomSlider";
+import PackageSlider from "../components/slider/PackageSlider";
 import { useState } from "react";
 
 const PricingSection = ({ data, type = "one" }) => {

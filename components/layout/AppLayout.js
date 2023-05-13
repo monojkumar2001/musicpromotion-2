@@ -1,10 +1,11 @@
 import Footer from "@components/footer/Footer";
-import Navbar from "@components/navbar/Navbar";
+import Header from "../Header/Header";
+
 
 const AppLayout = ({ children }) => {
 	return (
 		<>
-			<Navbar />
+			<Header/>
 			{children}
 			<Footer />
 		</>

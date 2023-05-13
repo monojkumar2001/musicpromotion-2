@@ -21,7 +21,8 @@
 		"react-modal": "^3.14.4",
 		"react-player": "^2.9.0",
 		"sass": "^1.49.0",
-		"swiper": "^6.8.1"
+		"swiper": "^6.8.1",
+		"use-count-up": "^3.0.1"
 	},
 	"devDependencies": {
 		"babel-loader": "^9.1.2",

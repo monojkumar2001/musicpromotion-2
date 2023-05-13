@@ -1,8 +1,8 @@
 import React from 'react'
-import AppLayout from "@components/layout/AppLayout";
-import SelectedService from '@components/sections/SelectedService';
-import CustomerDetails from '@components/sections/CustomerDetails';
-import OrderPlan from '@components/sections/OrderPlan';
+import AppLayout from "../components/layout/AppLayout";
+import SelectedService from '../components/sections/SelectedService';
+import CustomerDetails from '../components/sections/CustomerDetails';
+import OrderPlan from '../components/sections/OrderPlan';
 function OrderDetails() {
   return (
     <>

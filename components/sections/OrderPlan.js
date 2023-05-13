@@ -31,12 +31,12 @@ function OrderPlan() {
             </svg>
             Web and App Designer
           </span>
- <div className="order-apply-btn">
- <button>
-            <p>promo</p>
-            <span>APPLY</span>
-          </button>
- </div>
+          <div className="order-apply-btn">
+            <button>
+              <p>promo</p>
+              <span>APPLY</span>
+            </button>
+          </div>
         </div>
         <div className="order-subtotal-item">
           <p>Subtotal</p>

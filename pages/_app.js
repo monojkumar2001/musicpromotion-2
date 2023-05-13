@@ -5,10 +5,6 @@ import Head from "next/head";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
-// SEO
-import SEO from "@SEO/SEO";
-
 // Import Swiper styles
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";

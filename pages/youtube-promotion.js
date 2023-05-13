@@ -1,19 +1,19 @@
 // Layout and components
-import AppLayout from "@components/layout/AppLayout";
-import ServiceSection from "@components/sections/ServiceSection";
-import VisionSection from "@components/sections/VisionSection";
-import AboutSection from "@components/sections/ChainUpSection";
-import PricingSection from "@components/sections/PricingSection";
-import ImageSection from "@components/sections/ImageSection";
-import EngageSection from "@components/sections/EngageSection";
-import HowItWork from "@components/sections/HowItWork";
-import Agencies from "@components/sections/Agencies";
-import Follower from "@components/sections/Follower";
-import ContactUs from "@components/sections/ContactUs";
-import Registration from "@components/sections/Registration";
-import LinkedinSales from "@components/sections/LinkedinSales";
+import AppLayout from "../components/layout/AppLayout";
+import ServiceSection from "../components/sections/ServiceSection";
+import VisionSection from "../components/sections/VisionSection";
+import AboutSection from "../components/sections/ChainUpSection";
+import PricingSection from "../components/sections/PricingSection";
+import ImageSection from "../components/sections/ImageSection";
+import EngageSection from "../components/sections/EngageSection";
+import HowItWork from "../components/sections/HowItWork";
+import Agencies from "../components/sections/Agencies";
+import Follower from "../components/sections/Follower";
+import ContactUs from "../components/sections/ContactUs";
+import Registration from "../components/sections/Registration";
+import LinkedinSales from "../components/sections/LinkedinSales";
 import Faq from "react-faq-component";
-import SongFly from "@components/sections/SongFly";
+import SongFly from "../components/sections/SongFly";
 
 const Page4 = () => {
   // =========== Faq Question Data ===================

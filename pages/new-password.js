@@ -1,6 +1,5 @@
-import AppLayout from "@components/layout/AppLayout";
+import AppLayout from "../components/layout/AppLayout";
 import { useState } from "react";
-import Link from "next/link";
 
 const NewPasswordPage = () => {
 	const [type, setType] = useState("password");
