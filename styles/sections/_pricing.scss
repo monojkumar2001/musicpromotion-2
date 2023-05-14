@@ -117,10 +117,10 @@
         position: relative;
         transition: all 150ms ease-in-out;
         cursor: pointer;
-        gap: 30px;
+        gap: 20px;
         &:hover {
           transform: scale(1.01);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
         }
         .hat-svg {
           position: absolute;
@@ -139,12 +139,12 @@
           color: #000;
           text-transform: capitalize;
           font-weight: 700;
-          font-size: clamp(16px, 4vw, 40px);
+        font-size: 35px;
         }
         .pricing-info {
           position: relative;
           .price {
-            font-size: clamp(30px, 5vw, 60px);
+            font-size: clamp(25px, 4vw, 50px);
             font-weight: 700;
             margin-top: 15px;
             margin-bottom: 24px;
@@ -157,17 +157,17 @@
           }
         }
         .upper-details {
-          margin: 20px 0;
           width: 100%;
+          padding: 0 20px;
           .list-item {
             display: flex;
             align-items: center;
             gap: 16px;
             font-weight: 500;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: left;
             .item-text {
-              font-size: clamp(14px, 3vw, 20px);
+              font-size: 18px;
             }
           }
         }
@@ -186,15 +186,9 @@
           animation: pulse2 3s infinite;
         }
       }
-      @media screen and (max-width: 1300px) {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      @media screen and (max-width: 800px) {
-        grid-template-columns: 1fr;
-        gap: 60px;
-      }
     }
   }
+
   &.type-one {
     .pricing-container {
       .heading {
@@ -399,4 +393,38 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 992px) {
+  #pricing .pricing-container .package-slider .package-card-items {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
+}
+}
+@media screen and (max-width:768px) {
+  #pricing .pricing-container .package-slider .package-card-items {
+    grid-template-columns: 1fr;
+}
+#pricing .pricing-container .package-slider .package-card .package-type h4 {
+  font-size: 25px;
+}
+#pricing .pricing-container .package-slider .package-card .pricing-info .price {
+  font-weight: 700;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+#pricing .pricing-container .package-slider .package-card .pricing-info .package_lead {
+  font-size: 18px;
+}
+#pricing .pricing-container .package-slider .package-card .purchase-btn {
+  font-size: 20px;
+}
+#pricing .pricing-container .package-slider .package-card .upper-details .list-item .item-text {
+  font-size: 16px;
+}
+}
+@media screen and (max-width:550px) {
+  #pricing .pricing-container .package-slider .package-card .upper-details {
+    padding: 0px;
+} 
 }

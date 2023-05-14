@@ -187,7 +187,7 @@ color:#fff;
         gap: 40;
     }
     .section-title {
-        line-height: 50px;
+        line-height: 45px;
     }
 }
 // =========================== service section ====================
@@ -318,7 +318,18 @@ font-weight: 600;
 color: #fff;
 }
 
-
+@media screen and (max-width: 992px) { 
+.songFly-wrapper{
+    grid-template-columns: 1fr;
+} 
+}
+@media screen and (max-width: 550px) { 
+    .get-started-btn{
+        margin-top: 20px;
+    border-radius: 6px;
+    font-size: 17px;
+    }
+}
 // ======================== Recognized ======================
 .recognized{
     padding:100px 0 100px 0;
@@ -344,7 +355,29 @@ color: #fff;
     width: 70%;
     margin: auto;
 }
-
+@media screen and (max-width: 992px) { 
+    .recognized-wrapper{
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+    .recognized-left{
+        text-align: center;
+    }
+    .recognized {
+        padding: 70px 0 70px 0;
+    }
+    }
+@media screen and (max-width: 550px) { 
+    .recognized-right{
+        gap: 20px;
+    }
+    .recognized {
+        padding: 0px 0 70px 0;
+    }
+    }
 // ================ Marketing Agenchy ================
 .agenchy-img{
     margin-top: 80px;
@@ -352,7 +385,28 @@ color: #fff;
 .agenchy-img img{
     width: 100%;
 }
+.Agenchy-item img{
+    width: 100%;
+    margin: auto;
+}
 
+.Agenchy-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media screen and (max-width: 550px) {
+    .Agenchy-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 30px;
+        margin-top: 0px;
+    }
+    .agenchy-img{
+        margin-top: 40px;
+    }
+}
 // ================ Linkedin Sales  ================
 .linkedin-sales-wrapper{
 margin-top: 100px;
@@ -428,6 +482,35 @@ gap: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .linkedin-sales-wrapper {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .linkedin-sales-wrapper {
+        margin-top: 50px;
+    }
+    .linkedin-sales-card {
+        padding: 50px 30px 30px 30px;
+    }
+    .linkedin-sales-profile {
+        top: -30px;
+        width: 80px;
+        height: 80px;
+    }
+    .linkedin-sales-card h4 {
+        font-size: 18px;
+    }
+    .linkedin-sales-star svg{
+        width: 25px;
+        height: 22px;
+    }
+    .slider-nav {
+        margin-top: 10px;
+    }
 }
 .type-one {
     .next, .prev {
@@ -548,7 +631,39 @@ margin-top: 30px;
     bottom: -8px;
     position: absolute;
 }
-
+@media screen and (max-width: 1240px) {
+    .contact-us-img-1{
+display: none;
+    }
+    .contact-us-img-2{
+display: none;
+    }
+    .contact-us-content {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .contact-us-content {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .contact-us-wrapper {
+        position: relative;
+        border-radius: 15px;
+        padding: 80px 0 50px 0;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        text-align: center;
+        color: #fff;
+    }
+    .contact-con {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+}
 .type-one {
     .contact-us-wrapper{
     background: #1DB954;
@@ -711,12 +826,13 @@ font-size: 18px;
 color: #ffffff;
 }
 @media screen and (max-width:1200px) {
+    .registration_box{
+        grid-template-columns: 100%;
+    }
     .registration_title h1 {
         font-size: 50px;
         line-height: 120%;
     }
-   
-   
     .registration_form_name {
         margin-right: 10px;
     }
@@ -731,11 +847,31 @@ color: #ffffff;
    .registration_right{
       margin-top: 20px;
    }
+   .registration_icons{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.registration-input {
+    padding: 50px 0 100px 0;
+}
+}
+@media screen and  (max-width:600px) {
+    .registration_title h1 {
+        font-size: 30px;
+        line-height: 120%;
+    }
+   .registration_right{
+      margin-top: 20px;
+   }
+   .registration_icons{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 }
 @media screen and (max-width:500px) {
-    .registration_title h1{
-        font-size: 29px;
-    }
     .registration_disc {
         margin-top: 20px;
     }
@@ -751,7 +887,7 @@ color: #ffffff;
         display: block !important;
     }
     .registration_right_box {
-        padding: 20px 10px;
+        padding: 20px 20px;
         border-radius: 10px;
     }
     .registration_form_name {

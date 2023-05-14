@@ -22,7 +22,7 @@
     }
     .service-wrapper {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:1fr 1fr 1fr;
       gap: 70px;
       margin-top: 80px;
       .service-card {
@@ -56,12 +56,31 @@
       .service-card-middle {
         background: #00b1e7;
       }
-      @media screen and (max-width: 1080px) {
-        grid-template-columns: 1fr;
-      }
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  #service .container .service-wrapper{
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+.service-agency-img{
+  display: none;
+}
+#service .container .service-wrapper .service-card .service-details {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+}
+@media screen and (max-width: 768px) {
+  #service .container .service-wrapper{
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+}
+
+
 .type-one .container {
   .title-wrapper p.sec-sm-title {
     color: #1db954;

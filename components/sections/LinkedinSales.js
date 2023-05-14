@@ -17,7 +17,7 @@ const LinkedinSales = ({ data, type = "one" }) => {
         </div>
         <div className="linkedin-sales-wrapper">
           <Swiper
-            spaceBetween={40}
+            spaceBetween={60}
             slidesPerView={1}
             pagination={{ clickable: true }}
             modules={[Navigation, EffectCoverflow, A11y]}

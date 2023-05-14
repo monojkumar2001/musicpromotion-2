@@ -40,6 +40,41 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     height: 15px;
 }
 
+@media screen and (max-width: 768px) {
+    .agencies-content-warpper {
+        width: 100%;
+        margin: auto;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .agencies-table .table thead tr th {
+        padding: 15px 0;
+        text-align: start;
+        padding-left: 60px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+@media screen and (max-width: 600px) {
+    .agencies-table .table thead tr th {
+        padding: 15px 20px;
+        text-align: start;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .agencies-table .table tbody tr td {
+        padding: 5px 15px;
+        text-align: start;
+        font-size: 14px;
+        background: #F4F4F4;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+    .agencies {
+        padding-bottom: 70px;
+    }
+}
 .type-one {
     .agencies-table .table thead tr{
         background: #1DB954;

@@ -123,7 +123,7 @@ const Page1 = () => {
             </div>
           </div>
         </div>
-     
+      </div>
       {/* =============== Service Section ================= */}
       <ServiceSection />
       {/* =============== Vision Section ================== */}
@@ -133,7 +133,7 @@ const Page1 = () => {
       {/* =============== Pricing Section ================= */}
       <PricingSection data={pricingData} type="one" />
       {/* =============== Image Section =================== */}
-      <ImageSection type="one"/>
+      <ImageSection type="one" />
       {/* =============== Engage Section ================== */}
       <EngageSection />
       {/* =============== How It Work ===================== */}
@@ -141,9 +141,9 @@ const Page1 = () => {
       {/* =================== Agencies ==================== */}
       <Agencies />
       {/* =============== Follower ======================== */}
-      <Follower />
+      {/* <Follower /> */}
       {/* =============== Song Fly ======================== */}
-      <SongFly/>
+      <SongFly />
       {/* =============== Linkedin Sales ================== */}
       <LinkedinSales />
       {/*  ========= Faq Section start ======== */}
@@ -159,7 +159,6 @@ const Page1 = () => {
       <ContactUs />
       {/* ============  Resgistration =================== */}
       <Registration />
-      </div>
     </>
   );
 };

@@ -41,3 +41,19 @@
     }
 
 }
+@media screen and (max-width: 550px) {
+    #faq .container .row-title-text {
+        color: #292929;
+        position: relative;
+        margin: 0;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: start;
+    }
+    #faq {
+        padding: 0 0 60px 0;
+    }
+}
