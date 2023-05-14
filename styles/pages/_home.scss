@@ -26,11 +26,12 @@
                     }
                     h1.banner-title {
                         color: #000000;
-                        font-size: clamp(35px, 6vw, 70px);
+                        font-size: clamp(30px, 5vw, 70px);
                         font-weight: 800;
                         line-height: 90px;
                         margin-bottom: 30px;
                     }
+              
                     .banner-des {
                         margin-bottom: 30px;
                         font-size: 18px;
@@ -52,6 +53,7 @@
                     }
                 }
                 @media screen and (max-width: 980px) {
+                    
                     grid-template-columns: 1fr;
                     .banner-content {
                         text-align: center;
@@ -68,9 +70,24 @@
 
             }
         }
+        @media screen and (max-width: 980px) {
+            padding: 100px 0 80px 0;
+        }
+        @media screen and (max-width: 550px) {
+            padding: 80px 0 50px 0;
+        }
     }
 }
-
+@media screen and (max-width: 768px) {
+    h1.banner-title {
+        line-height: 60px !important;
+    }
+}
+@media screen and (max-width: 550px) {
+    h1.banner-title {
+        line-height: 50px !important;
+    }
+}
 // ================= Provide Count ===================
 
 .provide-count{
@@ -81,8 +98,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-
-
 }
 .provide-count-item p{
 font-size: 30px;
@@ -101,7 +116,30 @@ color:#fff;
 .provide-count-list .count .provide-count-span{
     color: #000;
 }
-
+@media screen and (max-width: 992px) {
+    .provide-count-wrapper{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .provide-count-item p{
+        font-size: 22px;
+        line-height: 35px;
+        text-align: center;
+        }
+}
+@media screen and (max-width: 550px) {
+    .provide-count{
+        padding: 20px;
+    }
+    .provide-count-wrapper{
+        gap: 20px;
+    }
+    .provide-count-item p{
+        font-size: 18px;
+        line-height: 35px;
+        text-align: center;
+        }
+}
 // ================= Why Us ===================
 .why-us{
     padding: 100px 0 100px 0;
@@ -130,7 +168,28 @@ color:#fff;
 .why-us-img img{
     width: 80%;
 }
-
+@media screen and (max-width: 992px) {
+    .why-us{
+        padding: 80px 0 60px 0;
+    }
+    .why-us-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .section-title {
+        line-height: 50px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .why-us{
+        padding: 50px 0 60px 0;
+    }
+    .why-us-wrapper{
+        gap: 40;
+    }
+    .section-title {
+        line-height: 50px;
+    }
+}
 // =========================== service section ====================
 
 .services{
@@ -202,7 +261,30 @@ padding: 10px 30px;
     background: #fff;
     color: #1DB954;
 }
+@media screen and (max-width: 992px) {
+    .services-wrapper{
+        display: grid;
+        grid-template-columns: 1fr  1fr;
+        gap: 50px 30px;
+        margin-top: 50px;
+    }
+    .services{
+        padding: 0 0 70px 0;
+    }
+    .title-wrapper{
+        width: 100%;
+    }
 
+}
+@media screen and (max-width: 550px) {
+    .services-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 50px 30px;
+        margin-top: 50px;
+    }
+}
 // ==================== songFly =============
 
 .songFly-wrapper{

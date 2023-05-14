@@ -1,53 +1,5 @@
 #chainup {
   padding: 100px 0px;
-  // &.type-two {
-  //   background: #ff9e60;
-  // }
-  // &.type-three {
-  //   background: #ffae34;
-  // }
-  // &.type-four {
-  //   background: #5482ff;
-  // }
-  // &.type-five {
-  //   background: #6e8df8;
-  // }
-  // &.type-six {
-  //   background: #fe5476;
-  // }
-  // &.type-seven {
-  //   background: #ef4b4c;
-  // }
-  // &.type-eight {
-  //   background: #c41b6c;
-  // }
-  // &.type-nine {
-  //   background: #6e8df8;
-  // }
-  // &.type-10 {
-  //   background: #5a8fe9;
-  // }
-  // &.type-11 {
-  //   background: #ef4b4c;
-  // }
-  // &.type-12 {
-  //   background: #d44f4a;
-  // }
-  // &.type-13 {
-  //   background: #ff9900;
-  // }
-  // &.type-14 {
-  //   background: #ef4b4c;
-  // }
-  // &.type-15 {
-  //   background: #c41b6c;
-  // }
-  // &.type-16 {
-  //   background: #24a5e7;
-  // }
-  // &.type-17 {
-  //   background: #00b1e7;
-  // }
   .container {
     .chainup-wrapper {
       display: grid;
@@ -119,4 +71,20 @@
       }
     }
   }
+}
+@media screen and (max-width: 992px) {
+  #chainup {
+    padding: 80px 0px;
+}
+.chainup-col .section-title{
+  text-align: center;
+}
+}
+@media screen and (max-width: 550px) {
+  #chainup {
+    padding: 60px 0px;
+}
+#chainup .container .chainup .chainup-card {
+  margin: 60px 30px 30px 30px;
+}
 }

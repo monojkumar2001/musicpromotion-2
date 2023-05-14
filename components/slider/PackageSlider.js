@@ -1,7 +1,7 @@
 import SwiperCore, { Pagination, Navigation, EffectCoverflow } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import React from "react";
-import PackageCard from "@components/cards/PackageCard";
+import PackageCard from "../cards/PackageCard";
 
 SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
 

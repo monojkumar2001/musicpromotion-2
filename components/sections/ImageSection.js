@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image1 from "@assets/image-1.png";
+import image1 from "../../public/assets/image-1.png";
 
 const ImageSection = ({ type = "one" }) => {
 	return (

@@ -1,4 +1,4 @@
-import LoginForm from "@components/auth/LoginForm";
+import LoginForm from "../auth/LoginForm";
 import Modal from "react-modal";
 
 const customStyles = {

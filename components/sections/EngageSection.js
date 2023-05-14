@@ -1,5 +1,5 @@
 import Image from "next/image";
-import image2 from "@assets/image-2.png";
+import image2 from "../../public/assets/image-2.png";
 
 const EngageSection = () => {
 	return (
