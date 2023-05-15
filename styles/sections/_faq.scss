@@ -5,8 +5,8 @@
         max-width: 95%;
         text-align: center;
         .heading {
-            font-size: clamp(30px, 3vw, 50px);
-            font-weight: 900;
+            font-size: clamp(26px, 3vw, 50px);
+            font-weight: 700;
             margin-bottom: 8px;
         }
         .content{
@@ -54,6 +54,6 @@
         text-align: start;
     }
     #faq {
-        padding: 0 0 60px 0;
+        padding: 0 0 40px 0;
     }
 }

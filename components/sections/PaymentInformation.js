@@ -17,7 +17,7 @@ function PaymentInformation() {
           <span>
             <input type="radio" /> Credit Card
           </span>
-          <img src="asset/order-details/credit-card.svg" alt="" />
+          <img src="assets/oder-details/credit-card-img.svg" alt="" />
         </div>
         <p>Pay Securely using credit card</p>
         <div className="customer-form-input-con">

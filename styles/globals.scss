@@ -394,6 +394,21 @@
         }
     }
 }
+@media screen and (max-width: 550px) {
+    .page-1 {
+        padding: 100px 0 0px 0;
+    }
+    .page-1 .banner-wrapper .banner-inner .banner-content {
+        padding: 50px 0 40px 0;
+    }
+    .page-1 .banner-wrapper .banner-inner .banner-content .banner-des {
+        margin-top: 15px;
+    }
+    .banner-inner .banner-content p.sm-title {
+        font-size: 20px !important;
+        margin-bottom: 10px !important;
+    }
+}
 #page2 {
     .banner-container {
         padding: 150px 0 00px 0;
@@ -761,6 +776,14 @@
                 }
             }
         }
+    }
+}
+@media screen and (max-width: 550px) {
+    .banner-container {
+        padding: 100px 0 0 0 !important;
+    }
+    .banner-wrapper .banner-inner .banner-content {
+        padding: 50px 0 !important;
     }
 }
 #page3 {

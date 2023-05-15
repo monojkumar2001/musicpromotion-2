@@ -27,7 +27,7 @@ const WhyUs = ({ type = "one" }) => {
             <video
                 className="video-controls"
                 muted autoPlay loop
-                src="https://res.cloudinary.com/ddu4x2opv/video/upload/v1684042096/musicpromotiontoday/why-us_z8w4tb.mp4"
+                src="https://res.cloudinary.com/ddu4x2opv/video/upload/v1684129841/musicpromotiontoday/Rotation_Animation_MPT_Fixed_Slowed_ohy4dk.mp4"
               ></video>
             </div>
           </div>

@@ -85,7 +85,7 @@
 }
 @media screen and (max-width: 550px) {
     h1.banner-title {
-        line-height: 50px !important;
+        line-height: 57px !important;
     }
 }
 // ================= Provide Count ===================
@@ -142,12 +142,12 @@ color:#fff;
 }
 // ================= Why Us ===================
 .why-us{
-    padding: 100px 0 100px 0;
+    padding: 70px 0 70px 0;
 }
 .section-title {
     color: #000000;
     font-size: clamp(25px, 4vw, 50px);
-    font-weight: 900;
+    font-weight: 800;
     line-height: 72px;
     margin-bottom: 20px;
 }
@@ -386,7 +386,7 @@ color: #fff;
     width: 100%;
 }
 .Agenchy-item img{
-    width: 100%;
+    width: 70%;
     margin: auto;
 }
 
@@ -491,7 +491,7 @@ gap: 20px;
 }
 @media screen and (max-width: 550px) {
     .linkedin-sales-wrapper {
-        margin-top: 50px;
+        margin-top: 30px;
     }
     .linkedin-sales-card {
         padding: 50px 30px 30px 30px;

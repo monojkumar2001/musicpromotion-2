@@ -9,7 +9,6 @@ const VisionSection = ({ type = "" }) => {
 						<p className="vision-des">
 						Our vision is to give talented independent music artists a possibility to get their music discovered by the right audiences through the best visual content &  marketing strategies. These will expand the reach of their music to viral influencers, hot playlists, record labels & radio stations.
 							<br />
-							<br />
 							Whether you make pop-rock or instrumental music, you only pay us to reach 100% active real listeners, influencers and curators who will dig your music.
 						</p>
 					</div>

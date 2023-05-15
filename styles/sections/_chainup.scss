@@ -62,6 +62,7 @@
         border-right: 1px solid #000;
       }
       @media screen and (max-width: 580px) {
+        margin-top: 40;
         grid-template-columns: 1fr;
         .col-2:first-child,
         .col-2:nth-child(2),
@@ -82,9 +83,12 @@
 }
 @media screen and (max-width: 550px) {
   #chainup {
-    padding: 60px 0px;
+    padding: 40px 0px;
 }
 #chainup .container .chainup .chainup-card {
   margin: 60px 30px 30px 30px;
+}
+#chainup .container .chainup {
+  margin-top: 30px;
 }
 }

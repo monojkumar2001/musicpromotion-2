@@ -5,7 +5,7 @@
 }
 .order-details-wrapper{
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 68% 29%;
     gap: 40px;
 }
 .selected-service-wrapper{   
@@ -40,18 +40,22 @@ margin-bottom: 40px;
     font-size: 16px;
     font-weight: 700;
     margin-top: 10px;
+    padding: 10px;
 }
 .selected-service-header-left .selected-title h1{
     font-size: 27px;
-    font-weight: 900;
+    font-weight: 700;
 }
 .selected-service-project-item{
     display: flex;
     gap: 50px;
 }
+.selected-service-project-img img{
+    width: 100%;
+}
 .selected-service-project-item h3{
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 55px;
 }
 .selected-service-project-item h3 span{
@@ -83,6 +87,9 @@ margin-bottom: 40px;
     font-weight: 700;
     color: #000000;
     opacity: 0.6;
+}
+.selected-service-header-right img{
+    width: 20px;
 }
 
 // ==== Customer Details =====
@@ -243,12 +250,27 @@ padding: 20px 40px;
     font-weight: 500;
 }
 
+// ======== Payment =============
 .payment-form-input-item-con{
     display: flex;
     align-items: center;
     gap: 15px;
 }
-
+.payment-information-credit-card {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.payment-information-credit-card img{
+    width: 70%;
+}
+.payment-information-credit-card span {
+    white-space: nowrap;
+}
+.payment-information-credit-card span input{
+    width: 30px;
+}
 .customer-form-input-con p a{
     color: #FF1010;
     text-decoration: underline;
@@ -261,4 +283,106 @@ padding: 15px ;
 color: #FFFFFF;
 font-size: 17px;
 font-weight: 500;
+}
+
+@media screen and (max-width: 1200px) {
+    .order-details-wrapper{
+display: flex;
+flex-direction: column-reverse;
+width: 100%;
+
+    }
+}
+@media screen and (max-width: 992px) {
+    .selected-service-project-item h3 {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 45px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .selected-title h1 {
+        font-size: 20px !important;
+        font-weight: 700;
+    }
+    .selected-service-project-item h3 {
+        font-size: 23px;
+        line-height: 35px;
+    }
+    .selected-service-list-item p {
+        font-size: 17px;
+        opacity: 0.6;
+    }
+    .selected-service-wrapper {
+        padding: 50px 30px;
+    }
+    .customer-details-wrapper {
+        padding: 50px 30px;
+    }
+    .customer-form-input-submit {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 550px) {
+    .order-details {
+        padding: 130px 0 70px 0;
+        background: #F6F8FA;
+    }
+    .selected-title h1 {
+        font-size: 20px !important;
+        font-weight: 700;
+    }
+    .selected-service-project-item {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .selected-service-list {
+        display: flex;
+        align-items:flex-start;
+        gap: 10px;
+        margin-bottom: 15px;
+        flex-direction: column;
+    }
+    .selected-service-project-item h3 {
+        font-size: 23px;
+        line-height: 35px;
+    }
+    .selected-service-list-item p {
+        font-size: 14px;
+        opacity: 0.6;
+    }
+    .selected-service-wrapper {
+        padding: 40px 20px;
+        border-radius: 10px;
+    }
+    .customer-details-wrapper {
+        padding: 40px 20px;
+        border-radius: 10px;
+    }
+    .customer-fullname {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    .order-plan-wrapper {
+        border-radius: 10px;
+        padding:40px 20px;
+    }
+    .order-secured {
+        border-radius: 10px;
+    }
+    .payment-form-input-item-con{
+        flex-direction: column;
+    }
+    .payment-information-credit-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
 }
