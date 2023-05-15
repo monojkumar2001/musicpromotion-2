@@ -3,7 +3,8 @@ import React from "react";
 
 const Contact = () => {
 	return ( <>
-          <div className="contact-header">
+          <div className="contact-header" data-aos="fade-up"
+            data-aos-duration="1000">
             <div className="contact-header-wrapper">
                 <h1>Contact With Us</h1>
                 <p>Our team wants to learn more about your project. Take some time to schedule a call and connect with us today. At Nftconstructer, we always respect your wishes and privacy and never share information with anyone or project details with people not employed by the company. Your security is our top priority.</p>
@@ -12,7 +13,8 @@ const Contact = () => {
         <div className='contact'>
         <div className='container'>
             <div className='contact-wrapper'>
-                <div className='contact-left'>
+                <div className='contact-left' data-aos="fade-up"
+            data-aos-duration="1000">
                 
                    <h2 className="contact-title">Lets talk with our awesome team</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
@@ -41,7 +43,8 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className='contact-right'>
+                <div className='contact-right' data-aos="fade-up"
+            data-aos-duration="1000">
                 <form className="contact-form">
                     <div className="form-field">
                         <label htmlFor="name">Your Name</label>

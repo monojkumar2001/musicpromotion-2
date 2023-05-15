@@ -4,12 +4,14 @@ const ChainUpSection = ({ type = "one" }) => {
     <section id="chainup" className={`type-${type}`}>
       <div className="container">
         <div className="chainup-wrapper">
-          <div className="chainup-col">
+          <div className="chainup-col" data-aos="fade-up"
+        data-aos-duration="1000">
             <div className="chainup-img">
               <img src="/assets/home-1/img/chainup-img.svg" alt="" />
             </div>
           </div>
-          <div className="chainup-col">
+          <div className="chainup-col" data-aos="fade-up"
+        data-aos-duration="2000">
             <h1 className="section-title">ChainUP Data Center Worldwide</h1>
             <div className="chainup">
               <div className="col-2">

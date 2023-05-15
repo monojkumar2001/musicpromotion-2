@@ -30,7 +30,8 @@ const FaqPage = () => {
 	  };
 	return (
 		<div className="faq">
-			<div className="container">
+			<div className="container" data-aos="fade-up"
+            data-aos-duration="1000">
 				<h1 className="heading">
 				Frequently Asked Questions <br /> <span className="focus">FAQs</span>
 				</h1>
@@ -47,96 +48,6 @@ const FaqPage = () => {
 					</div>
 				</div>
 				<div className="content">
-					{/* {[1].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>How will you promote my music?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))}
-					{[2].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>Is it reallt 100% safe?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))}
-					{[3].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>Where do you adverise my music?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))}
-					{[4].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>For how long does my promotion run?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))}
-					{[5].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>Can I make money with this promotion?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))}
-					{[6].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>How will you promote my music ?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))}
-					{[7].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>How will you promote my music ?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))}
-					{[8].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>Where do you adverise my music?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))}
-					{[9].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>Is it reallt 100% safe?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))}
-					{[10].map((item) => (
-						<Accordion key={item}>
-							<AccordionHeader>Where do you adverise my music?</AccordionHeader>
-							<p className="accordion-body">
-								Engagement may vary.* Typical engagements on average 5,000
-								streams and 700 followers organically
-							</p>
-						</Accordion>
-					))} */}
 					<Faq data={data} styles={styles} />
 				</div>
 			</div>

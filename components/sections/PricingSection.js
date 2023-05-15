@@ -9,13 +9,16 @@ const PricingSection = ({ data, type = "one" }) => {
 
   return (
     <section id="pricing" className={`type-${type}`}>
-      <div className="pricing-container">
-        <h1 className="heading">
+      <div className="pricing-container" >
+        <h1 className="heading" data-aos="fade-up"
+            data-aos-duration="1000">
           Customize Your <span>Package</span> <br /> <span>According</span> to
           Your Need
         </h1>
-        <p className="sub-heading">Ready to skyrocket your popularity?</p>
-        <div className="save-btn">
+        <p className="sub-heading" data-aos="fade-up"
+            data-aos-duration="1000">Ready to skyrocket your popularity?</p>
+        <div className="save-btn " data-aos="fade-up"
+            data-aos-duration="1000">
           <p>Save 20%</p>
         </div>
 

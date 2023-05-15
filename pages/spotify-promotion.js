@@ -48,7 +48,8 @@ const Page1 = () => {
     <>
       {/* ====================== Hero Section =========== */}
       <div className="page-1">
-        <div className="banner-wrapper">
+        <div className="banner-wrapper"  data-aos="fade-up"
+            data-aos-duration="1000">
           <div className="banner-inner">
             <div className="col">
               <div className="banner-content">

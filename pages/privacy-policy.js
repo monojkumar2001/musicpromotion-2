@@ -8,12 +8,14 @@ const privacyPolicy = () => {
                 <div className="privacy-policy-wrapper">
                     {/* section-1 */}
                     <div className="privacy-policy-content">
-                       <div className="privacy-policy-left">
+                       <div className="privacy-policy-left" data-aos="fade-up"
+            data-aos-duration="1000">
                             <div className="privacy-policy-img">
                             <img src="/assets/privacy-policy/1.png" alt="" />
                             </div>
                        </div>
-                       <div className="privacy-policy-right">
+                       <div className="privacy-policy-right" data-aos="fade-up"
+            data-aos-duration="1500">
                             <h2 className="privacy-policy-title">Section 1:  What do we do with your information</h2>
                             <div className="privacy-policy-description">
                                 <p>When you purchase something from our store, as part of the buying and selling process, we collect the personal information you give us such as your name, address and email address.
@@ -29,7 +31,8 @@ const privacyPolicy = () => {
                     </div>
                     {/* section-2 */}
                     <div className="privacy-policy-content privacy-policy-content-2">
-                       <div className="privacy-policy-right">
+                       <div className="privacy-policy-right" data-aos="fade-up"
+            data-aos-duration="1000">
                             <h2 className="privacy-policy-title">Section 2:  Cosent</h2>
                             <div className="privacy-policy-description">
                                 <p>How do you get my consent?</p>
@@ -42,7 +45,8 @@ const privacyPolicy = () => {
                             
                             </div>
                        </div>
-                       <div className="privacy-policy-left">
+                       <div className="privacy-policy-left" data-aos="fade-up"
+            data-aos-duration="1500">
                             <div className="privacy-policy-img">
                             <img src="/assets/privacy-policy/2.png" alt="" />
                             </div>
@@ -50,13 +54,15 @@ const privacyPolicy = () => {
                     </div>
 
                     {/* section-3 */}
-                    <div className="privacy-policy-content">
-                       <div className="privacy-policy-left">
+                    <div className="privacy-policy-content" >
+                       <div className="privacy-policy-left" data-aos="fade-up"
+            data-aos-duration="1000">
                             <div className="privacy-policy-img">
                             <img src="/assets/privacy-policy/3.png" alt="" />
                             </div>
                        </div>
-                       <div className="privacy-policy-right">
+                       <div className="privacy-policy-right" data-aos="fade-up"
+            data-aos-duration="1500">
                             <h2 className="privacy-policy-title">Section 3:  Disclosure</h2>
                             <div className="privacy-policy-description">
                                 <p>We may disclose your personal information if we are required by law to do so or if you violate our Terms of Service.</p>
@@ -66,7 +72,8 @@ const privacyPolicy = () => {
 
                      {/* section-4 */}
                      <div className="privacy-policy-content privacy-policy-content-2">
-                       <div className="privacy-policy-right">
+                       <div className="privacy-policy-right" data-aos="fade-up"
+            data-aos-duration="1000">
                             <h2 className="privacy-policy-title">Section 4:  Third party Services</h2>
                             <div className="privacy-policy-description">
                                 <p>n general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us.</p>
@@ -79,7 +86,8 @@ const privacyPolicy = () => {
                                 <p>As an example, if you are located in Canada and your transaction is processed by a payment gateway located in the United States, then your personal information used in completing that transaction may be subject to disclosure under United States legislation, including the Patriot Act.</p>
                             </div>
                        </div>
-                       <div className="privacy-policy-left">
+                       <div className="privacy-policy-left" data-aos="fade-up"
+            data-aos-duration="1500">
                             <div className="privacy-policy-img">
                             <img src="/assets/privacy-policy/4.png" alt="" />
                             </div>
@@ -88,12 +96,14 @@ const privacyPolicy = () => {
 
                       {/* section-5 */}
                     <div className="privacy-policy-content ">
-                       <div className="privacy-policy-left">
+                       <div className="privacy-policy-left" data-aos="fade-up"
+            data-aos-duration="1000">
                             <div className="privacy-policy-img">
                             <img src="/assets/privacy-policy/5.png" alt="" />
                             </div>
                        </div>
-                       <div className="privacy-policy-right">
+                       <div className="privacy-policy-right" data-aos="fade-up"
+            data-aos-duration="1500">
                             <h2 className="privacy-policy-title">Section 5:  Security</h2>
                             <div className="privacy-policy-description">
                                 <p>To protect your personal information, we take reasonable precautions and follow industry best practices to make sure it is not inappropriately lost, misused, accessed, disclosed, altered or destroyed.</p>
@@ -104,13 +114,15 @@ const privacyPolicy = () => {
                     </div>
                     {/* section-6 */}
                     <div className="privacy-policy-content privacy-policy-content-2">
-                       <div className="privacy-policy-right">
+                       <div className="privacy-policy-right" data-aos="fade-up"
+            data-aos-duration="1000">
                             <h2 className="privacy-policy-title">Section 6:  Age of Consent</h2>
                             <div className="privacy-policy-description">
                                 <p>By using this site, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.</p>
                             </div>
                        </div>
-                       <div className="privacy-policy-left">
+                       <div className="privacy-policy-left" data-aos="fade-up"
+            data-aos-duration="1500">
                             <div className="privacy-policy-img">
                             <img src="/assets/privacy-policy/6.png" alt="" />
                             </div>
@@ -119,12 +131,14 @@ const privacyPolicy = () => {
 
                     {/* section-7 */}
                     <div className="privacy-policy-content">
-                       <div className="privacy-policy-left">
+                       <div className="privacy-policy-left" data-aos="fade-up"
+            data-aos-duration="1000">
                             <div className="privacy-policy-img">
                             <img src="/assets/privacy-policy/7.png" alt="" />
                             </div>
                        </div>
-                       <div className="privacy-policy-right">
+                       <div className="privacy-policy-right" data-aos="fade-up"
+            data-aos-duration="1500">
                             <h2 className="privacy-policy-title">Section 7: Changes to this privacy Policy</h2>
                             <div className="privacy-policy-description">
                                 <p>We reserve the right to modify this privacy policy at any time, so please review it frequently. Changes and clarifications will take effect immediately upon their posting on the website. If we make material changes to this policy, we will notify you here that it has been updated, so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we use and/or disclose it.

@@ -5,7 +5,8 @@ const Registration = () => {
       <div className="registration-input">
         <div className="container">
           <div className="registration_box">
-            <div className=" registration_left ">
+            <div className=" registration_left " data-aos="fade-up"
+        data-aos-duration="1000">
               <div className="registration_title">
                 <p className="create-stort-title">The bottom line?</p>
                 <h1>With NFT Constructer you get</h1>
@@ -147,7 +148,8 @@ const Registration = () => {
                 </div>
               </div>
             </div>
-            <div className="registration_right">
+            <div className="registration_right" data-aos="fade-up"
+        data-aos-duration="1500">
               <div className="registration_right_box">
                 <form action="">
                   <div className="form_email">

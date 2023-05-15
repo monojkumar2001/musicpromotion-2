@@ -4,11 +4,12 @@ const ContactUs = ({ type = "one" }) => {
   return (
     <div className={`contact-con type-${type}`}>
       <div className="container">
-        <div className="contact-us-wrapper">
+        <div className="contact-us-wrapper" data-aos="fade-up"
+        data-aos-duration="1000">
           <div className="contact-us-logo">
             <img src="/assets/home-1/img/contact-logo.svg" alt="" />
           </div>
-          <div className="contact-us-content">
+          <div className="contact-us-content" >
             <h1 className="section-title">Is Your Project Not In The List</h1>
             <p>
               If you can describe it, chances are your dedicated team of

@@ -45,7 +45,8 @@ const Page4 = () => {
   return (
     <div id="page4">
       <div className="banner-container">
-        <div className="banner-wrapper">
+        <div className="banner-wrapper" data-aos="fade-up"
+            data-aos-duration="1000">
           <div className="banner-inner">
             <div className="col">
               <div className="banner-content">

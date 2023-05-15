@@ -6,7 +6,8 @@ const LinkedinSales = ({ data, type = "one" }) => {
   return (
     <div className={`services type-${type}`}>
       <div className="container">
-        <div className="title-wrapper">
+        <div className="title-wrapper" data-aos="fade-up"
+        data-aos-duration="1000">
           <h1 className="section-title">
             The #1 LinkedIn Sales Navigator Extractor
           </h1>
@@ -15,7 +16,8 @@ const LinkedinSales = ({ data, type = "one" }) => {
             Service.
           </p>
         </div>
-        <div className="linkedin-sales-wrapper">
+        <div className="linkedin-sales-wrapper" data-aos="fade-up"
+        data-aos-duration="1000">
           <Swiper
             spaceBetween={60}
             slidesPerView={1}

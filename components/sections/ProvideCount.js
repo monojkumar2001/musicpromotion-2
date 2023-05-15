@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 const ProvideCount = ({ type = "one" }) => {
 	return (
 	
-        <div className="provide-count">
+        <div className="provide-count"  >
         <div className="container">
      <div className="provide-count-wrapper">
-     <div className="provide-count-item">
+     <div className="provide-count-item" >
             <p>Provide a song that are ready to accompany Your Lonely</p>
           </div>
           <div className="provide-count-item">

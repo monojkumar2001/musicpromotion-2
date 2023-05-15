@@ -47,7 +47,8 @@ const Home = () => {
     <div id="home">
       {/*  ================ Hero Section ==============*/}
       <div className="hero">
-        <div className="banner-wrapper">
+        <div className="banner-wrapper"  data-aos="fade-up"
+            data-aos-duration="1000">
           <div className="banner-inner">
             <div className="col">
               <div className="banner-content">
@@ -67,7 +68,12 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="banner-right">
-                <img src="/assets/home-1/img/hero-img.svg" alt="" />
+              {/* <video
+                className="video-controls"
+                muted autoPlay loop
+                src="https://res.cloudinary.com/dne6hxmao/video/upload/v1684137120/Music%20Promotion%20Today/Hover_Animation_pm5pti.mp4"
+              ></video> */}
+              <img src="assets/home-1/img/hero-img.gif" alt="" />
               </div>
             </div>
           </div>
@@ -92,8 +98,10 @@ const Home = () => {
       {/*  ============== Faq Section start ============== */}
       <section id="faq">
         <div className="container">
-          <h1 className="heading">Frequently Asked Questions</h1>
-          <div className="content">
+          <h1 className="heading" data-aos="fade-up"
+        data-aos-duration="1000">Frequently Asked Questions</h1>
+          <div className="content" data-aos="fade-up"
+        data-aos-duration="1000">
             <Faq data={data} styles={styles} />
           </div>
         </div>

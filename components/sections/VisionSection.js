@@ -3,7 +3,8 @@ const VisionSection = ({ type = "" }) => {
 		<section id="vision" className={`type-${type}`}>
 			<div className="container">
 				<div className="vision-wrapper">
-					<div className="vision-left">
+					<div className="vision-left" data-aos="fade-up"
+            data-aos-duration="1000">
 						<h2 className="vision-title">We are here to grow your channel</h2>
 
 						<p className="vision-des">
@@ -13,7 +14,8 @@ const VisionSection = ({ type = "" }) => {
 						</p>
 					</div>
 
-					<div className="vision-right">
+					<div className="vision-right" data-aos="fade-up"
+            data-aos-duration="1000">
 						<img src="/assets/img/4.svg" alt="" />
 					</div>
 				</div>

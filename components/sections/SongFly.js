@@ -3,7 +3,8 @@ const SongFly = ({ data, type = "one" }) => {
     <div className="songFly services">
       <div className="container">
         <div className="songFly-wrapper">
-          <div className="songFly-left">
+          <div className="songFly-left" data-aos="fade-up"
+        data-aos-duration="1000">
             <h1 className="section-title">Reach new heights with SongFly</h1>
             <div className="songfly-list-item">
               <div className="songfly-list">
@@ -33,7 +34,8 @@ const SongFly = ({ data, type = "one" }) => {
             </div>
             <button className="get-started-btn">Get Started</button>
           </div>
-          <div className="songFly-right">
+          <div className="songFly-right" data-aos="fade-up"
+        data-aos-duration="2000">
             <img src="/assets/home-1/img/songfly-img.svg" alt="" />
           </div>
         </div>

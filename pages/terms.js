@@ -4,13 +4,14 @@ function terms() {
     <div className="terms">
       <div className="container">
         <div className="terms-wrapper">
-          <div className="terms-title">
+          <div className="terms-title" data-aos="fade-up"
+            data-aos-duration="1000">
             <h4>AGREMEENT</h4>
             <h2>
               Terms of <span className="focus">Services</span> {""}
             </h2>
           </div>
-          <div className="terms-dis">
+          <div className="terms-dis" >
             <p>
               Musicpromotiontoday.com is the owner and operator of this website.
               The terms "we," "us," and "our" refer to musicpromotiontoday.com
@@ -41,7 +42,8 @@ function terms() {
               publishing of any modifications, your continued use or access to
               the website implies acceptance of those changes.
             </p>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 1 – ONLINE STORE TERMS </h3>
               <p>
                 By accepting these Terms of Service, you certify that you are at
@@ -57,7 +59,8 @@ function terms() {
                 immediately terminated if any of the Terms are violated.{" "}
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 2 – GENERAL CONDITIONS </h3>
               <p>
                 Anytime, for any reason, we have the right to deny service to
@@ -75,7 +78,8 @@ function terms() {
                 any way.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>
                 SECTION 3 – ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION{" "}
               </h3>
@@ -94,7 +98,8 @@ function terms() {
                 keep track of updates to our website.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 4 – MODIFICATIONS TO THE SERVICE AND PRICES </h3>
               <p>
                 Without prior notice, our product prices can vary. We retain the
@@ -105,7 +110,8 @@ function terms() {
                 parties.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 5 – PRODUCTS OR SERVICES </h3>
               <p>
                 Some goods or services might only be accessible online via the
@@ -125,7 +131,8 @@ function terms() {
                 defects in the Service will be fixed.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 6 – ACCURACY OF BILLING AND ACCOUNT INFORMATION </h3>
               <p>
                 Every order you place with us may be rejected by us at our
@@ -147,7 +154,8 @@ function terms() {
                 numbers, and expiration dates.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 7 – OPTIONAL TOOLS </h3>
               <p>
                 We might give you access to third-party tools that we don't
@@ -167,7 +175,8 @@ function terms() {
                 any additional features or services that are implemented.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 8 – THIRD-PARTY LINKS </h3>
               <p>
                 Materials from third parties may be included in some content,
@@ -187,7 +196,8 @@ function terms() {
                 parties should be addressed to the third party.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>
                 SECTION 9 – USER COMMENTS, FEEDBACK AND OTHER SUBMISSIONS{" "}
               </h3>
@@ -219,14 +229,16 @@ function terms() {
                 party, we disclaim all liability.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 10 – PERSONAL INFORMATION </h3>
               <p>
                 Our Privacy Policy applies to any personal information you
                 submit through the store. Click here to view our Privacy Policy.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3> SECTION 11 – ERRORS, INACCURACIES AND OMISSIONS </h3>
               <p>
                 On rare occasions, material on our website or in the Service may
@@ -245,7 +257,8 @@ function terms() {
                 there is no explicit update or refresh date applied.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 12 – PROHIBITED USES </h3>
               <p>
                 You are not permitted to use the website or its material in any
@@ -270,7 +283,8 @@ function terms() {
                 them.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>
                 SECTION 13 – DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY{" "}
               </h3>
@@ -311,7 +325,8 @@ function terms() {
                 the greatest extent permissible by law.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 14 – INDEMNIFICATION </h3>
               <p>
                 You consent to hold harmless musicpromotiontoday.com and our
@@ -324,7 +339,8 @@ function terms() {
                 your violation of any law or the rights of a third-party.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 15 – SEVERABILITY </h3>
               <p>
                 In the event that any provision of these Terms of Service is
@@ -336,7 +352,8 @@ function terms() {
                 remaining provisions.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 16 – TERMINATION </h3>
               <p>
                 The termination of this agreement shall not affect the parties'
@@ -353,7 +370,8 @@ function terms() {
                 (or any part thereof).
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list " data-aos="fade-up"
+            data-aos-duration="1000"> 
               <h3> SECTION 17 – ENTIRE AGREEMENT </h3>
               <p>
                 Any right or provision of these Terms of Service that we do not
@@ -369,7 +387,8 @@ function terms() {
                 the party who drafted them.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 18 – GOVERNING LAW </h3>
               <p>
                 USA state law will be followed in interpreting and governing
@@ -377,7 +396,8 @@ function terms() {
                 supply you with services.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 19 – CHANGES TO TERMS OF SERVICE </h3>
               <p>
                 On this page, you can always consult the most recent version of
@@ -390,7 +410,8 @@ function terms() {
                 modifications.
               </p>
             </div>
-            <div className="terms-list">
+            <div className="terms-list" data-aos="fade-up"
+            data-aos-duration="1000">
               <h3>SECTION 20 – CONTACT INFORMATION </h3>
               <p>
                 Please contact us with any inquiries you may have at
@@ -398,9 +419,9 @@ function terms() {
               </p>
             </div>
           </div>
-          <div className="terms-blur"></div>
         </div>
-        <div className="terms-btn">
+        <div className="terms-btn" data-aos="fade-up"
+            data-aos-duration="1000">
           <div className="terms-btn-item">
             <button className="terms-btn-1">Not right now </button>
           </div>

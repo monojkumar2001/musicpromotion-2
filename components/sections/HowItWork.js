@@ -6,7 +6,8 @@ function HowItWork({ type = "one" }) {
     <section className={`business-grow type-${type}`}>
       <div className="container">
         <div className="business-warrper">
-          <div className="business-left">
+          <div className="business-left" data-aos="fade-up"
+            data-aos-duration="1000">
             <div
               className={
                 isHovering === 1 ? "business-items active" : "business-items"
@@ -61,7 +62,8 @@ function HowItWork({ type = "one" }) {
               </div>
             </div>
           </div>
-          <div className="business-right">
+          <div className="business-right" data-aos="fade-up"
+            data-aos-duration="1000">
             <div className="business-img">
               <video
                 className="video-controls"

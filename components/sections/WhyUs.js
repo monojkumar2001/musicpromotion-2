@@ -5,7 +5,8 @@ const WhyUs = ({ type = "one" }) => {
     <div className="why-us">
       <div className="container">
         <div className="why-us-wrapper">
-          <div className="why-us-item">
+          <div className="why-us-item"  data-aos="fade-up"
+            data-aos-duration="1000">
             <h1 className="section-title">Why Us</h1>
             <p>
               Our design services include solutions to fit any budget starting
@@ -22,7 +23,8 @@ const WhyUs = ({ type = "one" }) => {
               you don't receive the best one for your company.
             </p>
           </div>
-          <div className="why-us-item">
+          <div className="why-us-item"  data-aos="fade-up"
+            data-aos-duration="1500">
             <div className="why-us-img">
             <video
                 className="video-controls"

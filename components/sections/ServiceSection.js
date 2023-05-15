@@ -3,7 +3,8 @@ const ServiceSection = ({ data, type = "one" }) => {
     <section>
       <div id="service" className={`service cpb-6 type-${type}`}>
         <div className="container">
-          <div className="title-wrapper">
+          <div className="title-wrapper" data-aos="fade-up"
+            data-aos-duration="1000">
             <div className="sec-title">
               <p className="sec-sm-title">Our Services</p>
               <h2 className="main-title">
@@ -17,7 +18,8 @@ const ServiceSection = ({ data, type = "one" }) => {
           </div>
 
           <div className="service-wrapper mt-3">
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-up"
+            data-aos-duration="1000">
               <div className="service-agency-img">
               <img src="/assets/home-2/img/agenchy-img-1.svg" alt="" />
               </div>
@@ -29,7 +31,8 @@ const ServiceSection = ({ data, type = "one" }) => {
                 </p>
               </div>
             </div>
-            <div className="service-card service-card-middle">
+            <div className="service-card service-card-middle" data-aos="fade-up"
+            data-aos-duration="1500">
               <div className="service-agency-img">
               <img src="/assets/home-2/img/agenchy-img-2.svg" alt="" />
               </div>
@@ -40,7 +43,8 @@ const ServiceSection = ({ data, type = "one" }) => {
                 </p>
               </div>
             </div>
-            <div className="service-card">
+            <div className="service-card" data-aos="fade-up"
+            data-aos-duration="2000">
               <div className="service-agency-img">
               <img src="/assets/home-2/img/agenchy-img-3.svg" alt="" />
               </div>

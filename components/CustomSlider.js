@@ -36,7 +36,8 @@ const wrapperStyle = {
 const CustomSlider = ({ setSliderValue }) => {
 	return (
 		<div>
-			<div style={wrapperStyle}>
+			<div style={wrapperStyle} data-aos="fade-up"
+            data-aos-duration="1000">
 				<Slider
 					min={1}
 					max={10}

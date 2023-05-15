@@ -10,7 +10,8 @@ const PackageSlider = ({ data, sliderValue }) => {
     <div className="package-slider">
       <div className="package-card-items">
         {data.map((item, i) => (
-          <div className="package-card-item" key={i}>
+          <div className="package-card-item" key={i} data-aos="fade-up"
+          data-aos-duration="1000">
             <PackageCard index={i} {...item} sliderValue={sliderValue} />
           </div>
         ))}
