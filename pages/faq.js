@@ -1,9 +1,33 @@
 import Accordion from "../components/accordion/Accordion";
 import AccordionHeader from "../components/accordion/AccordionHeader";
 import AppLayout from "../components/layout/AppLayout";
-import React from "react";
-
+import Faq from "react-faq-component";
 const FaqPage = () => {
+	const data = {
+		rows: [
+		  {
+			title: "Metaverse development: what is it?",
+			content: `You can design your own virtual world setting to hold conventions, meetings, seminars, concerts, or even to start your own real-world company there.`,
+		  },
+		  {
+			title: "How much does our metaverse development service cost?",
+			content: `To get a price on your metaverse development project, get in touch with our team. Your specified features, functionalities, and other factors will affect the price. `,
+		  },
+		  {
+			title: "What are the benefits of investing in metaverse platforms?",
+			content: `Experts claim that the metaverse has a trillion-dollar industry thus has a promising future. If you work in such a growing field, you will be noticed by others. Be a pioneer in the field!`,
+		  },
+		  {
+			title: "What can a metaverse development company do for you?",
+			content: `What can a metaverse development company do for you?`,
+		  },
+		],
+	  };
+	
+	  const styles = {
+		titleTextColor: "blue",
+		rowTitleColor: "blue",
+	  };
 	return (
 		<div className="faq">
 			<div className="container">
@@ -22,8 +46,8 @@ const FaqPage = () => {
 						<img src="/assets/faq/faq-img.png" alt="" />	
 					</div>
 				</div>
-				<div className="questions">
-					{[1].map((item) => (
+				<div className="content">
+					{/* {[1].map((item) => (
 						<Accordion key={item}>
 							<AccordionHeader>How will you promote my music?</AccordionHeader>
 							<p className="accordion-body">
@@ -112,8 +136,8 @@ const FaqPage = () => {
 								streams and 700 followers organically
 							</p>
 						</Accordion>
-					))}
-					
+					))} */}
+					<Faq data={data} styles={styles} />
 				</div>
 			</div>
 			</div>

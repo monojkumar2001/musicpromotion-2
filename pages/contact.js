@@ -3,7 +3,12 @@ import React from "react";
 
 const Contact = () => {
 	return ( <>
-            
+          <div className="contact-header">
+            <div className="contact-header-wrapper">
+                <h1>Contact With Us</h1>
+                <p>Our team wants to learn more about your project. Take some time to schedule a call and connect with us today. At Nftconstructer, we always respect your wishes and privacy and never share information with anyone or project details with people not employed by the company. Your security is our top priority.</p>
+            </div>
+            </div>  
         <div className='contact'>
         <div className='container'>
             <div className='contact-wrapper'>

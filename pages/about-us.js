@@ -1,7 +1,15 @@
 import AppLayout from "../components/layout/AppLayout";
 const AboutUs = () => {
 	return (
-		<div className="about-us">
+        
+		<>
+        <div className="contact-header about-us-header">
+            <div className="contact-header-wrapper">
+                <h1>About Us</h1>
+                <p>Our team wants to learn more about your project. Take some time to schedule a call and connect with us today. At Nftconstructer, we always respect your wishes and privacy and never share information with anyone or project details with people not employed by the company. Your security is our top priority.</p>
+            </div>
+            </div> 
+        <div className="about-us">
             <div className="container">
                 <div className="about-us-wrapper">
                     <div className="about-us-content">
@@ -52,6 +60,7 @@ const AboutUs = () => {
                      
             </div>
          </div>
+         </>
           
             
        
