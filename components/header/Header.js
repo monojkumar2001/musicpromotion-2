@@ -234,7 +234,7 @@ function Header() {
                     </li>
 
                     {/* ========= sign up btn =============== */}
-                    <button className="profile-btn" onClick={handleModal}>
+                    {/* <button className="profile-btn" onClick={handleModal}>
                       <svg
                         width="20"
                         height="20"
@@ -247,7 +247,7 @@ function Header() {
                           fill="white"
                         />
                       </svg>
-                    </button>
+                    </button> */}
                   </ul>
                 </div>
               </div>

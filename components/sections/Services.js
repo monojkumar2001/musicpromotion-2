@@ -2,7 +2,8 @@ import React from "react";
 import Link from "next/link";
 const Services = ({ type = "one" }) => {
   return (
-    <div className="services">
+    <div className="services"  data-aos="fade-up"
+    data-aos-duration="1000">
       <div className="container">
         <div className="title-wrapper">
             <h1 className="section-title">Services</h1>
@@ -11,8 +12,7 @@ const Services = ({ type = "one" }) => {
             </p>
         </div>
         <div className="services-wrapper">
-          <div className="services-card"  data-aos="fade-up"
-            data-aos-duration="1000">
+          <div className="services-card" >
             <div className="services-icon">
               <img src="/assets/home-1/img/service-1.svg" alt="" />
             </div>
@@ -24,8 +24,7 @@ const Services = ({ type = "one" }) => {
             </p>
             <Link href='/spotify-promotion'><button className="learn-more-btn">Learn More</button></Link>
           </div>
-          <div className="services-card"  data-aos="fade-up"
-            data-aos-duration="1500">
+          <div className="services-card">
             <div className="services-icon">
               <img src="/assets/home-1/img/service-4.svg" alt="" />
             </div>
@@ -38,8 +37,7 @@ const Services = ({ type = "one" }) => {
             </p>
             <Link href='/soundcloud-promotion'><button className="learn-more-btn">Learn More</button></Link>
           </div>
-          <div className="services-card"  data-aos="fade-up"
-            data-aos-duration="2000">
+          <div className="services-card">
             <div className="services-icon">
               <img src="/assets/home-1/img/service-3.svg" alt="" />
             </div>
@@ -51,8 +49,7 @@ const Services = ({ type = "one" }) => {
             </p>
             <Link href='/instagram-promotion'><button className="learn-more-btn">Learn More</button></Link>
           </div>
-          <div className="services-card" data-aos="fade-up"
-            data-aos-duration="2500">
+          <div className="services-card">
             <div className="services-icon">
               <img src="/assets/home-1/img/service-2.svg" alt="" />
             </div>

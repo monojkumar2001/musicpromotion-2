@@ -103,8 +103,13 @@
 	}
 
 	.social-area {
-		color: #fff;
-		margin-top: 25px;
+			color: #fff;
+			margin-top: 25px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		
 
 		p {
 			margin-bottom: 10px;
