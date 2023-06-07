@@ -18,9 +18,7 @@ const Services = ({ type = "one" }) => {
             </div>
             <h3>Spotify Promotion</h3>
             <p className="service-dis">
-              With NFT CONSTRUCTER, you can build a feature-rich, user-friendly
-              NFT minting platform or marketplace without any coding or
-              technical
+            We offer Spotify campaigns to drive in followers, plays and increase brand awareness for artists. Contact us to get started with our music promotion.
             </p>
             <Link href='/spotify-promotion'><button className="learn-more-btn">Learn More</button></Link>
           </div>
@@ -30,10 +28,7 @@ const Services = ({ type = "one" }) => {
             </div>
             <h3> Soundcloud Promotion</h3>
             <p className="service-dis">
-              With NFT CONSTRUCTER, you can build a feature-rich, user-friendly
-              NFT minting platform or marketplace without any coding or
-              technical
-              
+            Promoting hashtags and using SEO techniques to get posts seen and seen by real users, high level accounts, and verified accounts will help Instagram reward popularity.
             </p>
             <Link href='/soundcloud-promotion'><button className="learn-more-btn">Learn More</button></Link>
           </div>
@@ -43,9 +38,7 @@ const Services = ({ type = "one" }) => {
             </div>
             <h3>Instagram Promotion</h3>
             <p className="service-dis">
-              With NFT CONSTRUCTER, you can build a feature-rich, user-friendly
-              NFT minting platform or marketplace without any coding or
-              technical
+            Our SoundCloud promotional services helps musicians build their brand and drive in attention, new fans, and followers. Contact us for custom campaigns.
             </p>
             <Link href='/instagram-promotion'><button className="learn-more-btn">Learn More</button></Link>
           </div>

@@ -45,6 +45,7 @@ const Home = () => {
   return (
     
     <div id="home">
+      
       {/*  ================ Hero Section ==============*/}
       <div className="hero">
         <div className="banner-wrapper"  data-aos="fade-up"
