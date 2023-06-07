@@ -28,7 +28,7 @@ const Services = ({ type = "one" }) => {
             </div>
             <h3> Soundcloud Promotion</h3>
             <p className="service-dis">
-            Promoting hashtags and using SEO techniques to get posts seen and seen by real users, high level accounts, and verified accounts will help Instagram reward popularity.
+            Our SoundCloud promotional services helps musicians build their brand and drive in attention, new fans, and followers. Contact us for custom campaigns.
             </p>
             <Link href='/soundcloud-promotion'><button className="learn-more-btn">Learn More</button></Link>
           </div>
@@ -38,7 +38,7 @@ const Services = ({ type = "one" }) => {
             </div>
             <h3>Instagram Promotion</h3>
             <p className="service-dis">
-            Our SoundCloud promotional services helps musicians build their brand and drive in attention, new fans, and followers. Contact us for custom campaigns.
+            Promoting hashtags and using SEO techniques to get posts seen and seen by real users, high level accounts, and verified accounts will help Instagram reward popularity.
             </p>
             <Link href='/instagram-promotion'><button className="learn-more-btn">Learn More</button></Link>
           </div>
@@ -48,9 +48,7 @@ const Services = ({ type = "one" }) => {
             </div>
             <h3>Youtube Promotion</h3>
             <p className="service-dis">
-              With NFT CONSTRUCTER, you can build a feature-rich, user-friendly
-              NFT minting platform or marketplace without any coding or
-              technical
+            Utilize our organic YouTube Promotion packages to boost your views naturally.To promote your tracks, we only employ natural approaches.
             </p>
             <Link href='/youtube-promotion'><button className="learn-more-btn">Learn More</button></Link>
           </div>
