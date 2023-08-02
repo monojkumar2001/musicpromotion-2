@@ -47,30 +47,6 @@ const Faqshow = () => {
                 </div>
             </div>
         </section>
-
-        //     <section>
-        //        <div className="cpt-6">             
-        //            <div className="container">
-        //            <div className="row g-4">
-        //             <div className="col-lg-5 col-md-12">
-        //             <div className="left-faq">
-        //                 <h2>Frequently Asked Questions</h2>
-        //                 <p>If you can not find what you are looking for <a className="faq-link" href="/contact">send us a message!</a></p>
-        //                 <img src="Images/faq.svg" className="faq-image" alt=""/>
-        //                 </div>
-        //             </div>
-        //             <div className="col-lg-7 col-md-12">
-        //             <Faq
-        //                     data={data}
-        //                     styles={styles}
-        //                     config={config}
-        //                     />
-        //             </div>
-        //            </div>
-        //            </div>
-
-        //        </div>
-        //    </section>
     )
 }
 
