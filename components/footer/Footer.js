@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Subscriber from "./Subscriber";
 const Footer = () => {
 	return (
 		<footer id="footer">
@@ -98,26 +99,7 @@ const Footer = () => {
 						</div>
 
 						<div className="footer-col">
-							<h4 className="footer-link-title">Get In Touch</h4>
-							<p>
-								Get the ideas, tools and tips you need to grow your sound
-								straight to your inbox.
-							</p>
-
-							<div className="subscribe-form">
-								<form action="">
-									<div className="input-group">
-										<input
-											type="text"
-											placeholder="Enter Your Email"
-											className="subscribe-input"
-										/>
-										<button type="submit" className="submit-button">
-											Subscribe
-										</button>
-									</div>
-								</form>
-							</div>
+							<Subscriber />
 						</div>
 					</div>
 					<div className="social-area">

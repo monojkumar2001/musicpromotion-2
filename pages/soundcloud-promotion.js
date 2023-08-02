@@ -10,10 +10,11 @@ import HowItWork from "../components/sections/HowItWork";
 import Agencies from "../components/sections/Agencies";
 import Follower from "../components/sections/Follower";
 import ContactUs from "../components/sections/ContactUs";
-import Registration from "../components/sections/Registration";
-import LinkedinSales from "../components/sections/LinkedinSales";
+import Registration from "../components/home/registration/Registration";
+import LinkedinSales from "../components/home/linkedinSales/LinkedinSales";
 import Faq from "react-faq-component";
 import SongFly from "../components/sections/SongFly";
+import Faqshow from "../components/Faq/Faqshow"
 
 // Images
 
@@ -141,14 +142,7 @@ const Page2 = () => {
       {/* =============== Linkedin Sales ================== */}
       <LinkedinSales type="two" />
       {/*  ========= Faq Section start ======== */}
-      <section id="faq">
-        <div className="container">
-          <h1 className="heading">Frequently Asked Questions</h1>
-          <div className="content">
-            <Faq data={data} styles={styles} />
-          </div>
-        </div>
-      </section>
+      <Faqshow />
       {/* ============  Contact Us ===================== */}
       <ContactUs type="two" />
       {/* ============  Resgistration =================== */}

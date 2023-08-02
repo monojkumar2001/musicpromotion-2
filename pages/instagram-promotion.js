@@ -10,11 +10,12 @@ import HowItWork from "../components/sections/HowItWork";
 import Agencies from "../components/sections/Agencies";
 import Follower from "../components/sections/Follower";
 import ContactUs from "../components/sections/ContactUs";
-import Registration from "../components/sections/Registration";
-import LinkedinSales from "../components/sections/LinkedinSales";
+import Registration from "../components/home/registration/Registration";
+import LinkedinSales from "../components/home/linkedinSales/LinkedinSales";
 import Faq from "react-faq-component";
 import SongFly from "../components/sections/SongFly";
-
+import Faqshow from "../components/Faq/Faqshow"
+import Image from "next/image";
 const Page3 = () => {
   // =========== Faq Question Data ===================
   const data = {
@@ -68,7 +69,7 @@ const Page3 = () => {
             </div>
             <div className="col">
               <div className="banner-right">
-                <img src="/assets/home-3/img/1.png" alt="" />
+                <Image width={598} height={556} src="/assets/home-3/img/1.png" alt="" />
               </div>
             </div>
           </div>
@@ -98,14 +99,7 @@ const Page3 = () => {
       {/* =============== Linkedin Sales ================== */}
       <LinkedinSales type="three" />
       {/*  ========= Faq Section start ======== */}
-      <section id="faq">
-        <div className="container">
-          <h1 className="heading">Frequently Asked Questions</h1>
-          <div className="content">
-            <Faq data={data} styles={styles} />
-          </div>
-        </div>
-      </section>
+      <Faqshow />
       {/* ============  Contact Us ===================== */}
       <ContactUs type="three" />
       {/* ============  Resgistration =================== */}

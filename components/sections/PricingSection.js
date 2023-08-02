@@ -4,7 +4,7 @@ import CustomSlider from "../CustomSlider";
 import PackageSlider from "../slider/PackageSlider";
 import { useState } from "react";
 
-const PricingSection = ({ data, type = "one" }) => {
+const PricingSection = ({ type = "one",image,title }) => {
   const [sliderValue, setSliderValue] = useState(1);
 
   return (
@@ -23,7 +23,7 @@ const PricingSection = ({ data, type = "one" }) => {
         </div>
 
         <CustomSlider setSliderValue={setSliderValue}/>
-        <PackageSlider data={data} sliderValue={sliderValue} />
+        <PackageSlider sliderValue={sliderValue} image={image} title={title} />
       </div>
     </section>
   );

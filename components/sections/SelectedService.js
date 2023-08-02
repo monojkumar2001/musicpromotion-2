@@ -1,6 +1,7 @@
 import React from "react";
 
-function SelectedService() {
+function SelectedService({items}) {
+
   return (
     <div className="selected-service-wrapper">
       <div className="selected-service-header">
@@ -20,55 +21,28 @@ function SelectedService() {
       </div>
       <div className="selected-service-project-item ">
         <div className="selected-service-project-img">
-          <img src="assets/oder-details/project-img.svg" alt="" />
+          <img src={items.service_image} alt="" />
         </div>
         <h3>
-          Targeted <span>Spotify</span> Promotion
+        {items.service_title}
         </h3>
       </div>
       <div className="selected-service-list-items">
+      
         <div className="selected-service-list">
-          <div className="selected-service-list-item">
-            <span>
-              <img src="assets/oder-details/check-mark.svg" alt="" />
-            </span>
-            <p>Everything in Pro</p>
-          </div>
-          <div className="selected-service-list-item">
-            <span>
+        <div className="selected-service-list-item">
+          <span>
             <img src="assets/oder-details/check-mark.svg" alt="" />
-            </span>
-            <p>Everything in Pro</p>
-          </div>
+          </span>
+          <p>Everything in Pro</p>
         </div>
-        <div className="selected-service-list">
-          <div className="selected-service-list-item">
-            <span>
-            <img src="assets/oder-details/check-mark.svg" alt="" />
-            </span>
-            <p>Everything in Pro</p>
-          </div>
-          <div className="selected-service-list-item">
-            <span>
-            <img src="assets/oder-details/check-mark.svg" alt="" />
-            </span>
-            <p>Everything in Pro</p>
-          </div>
+        <div className="selected-service-list-item">
+          <span>
+          <img src="assets/oder-details/check-mark.svg" alt="" />
+          </span>
+          <p>Everything in Pro</p>
         </div>
-        <div className="selected-service-list">
-          <div className="selected-service-list-item">
-            <span>
-            <img src="assets/oder-details/check-mark.svg" alt="" />
-            </span>
-            <p>Everything in Pro</p>
-          </div>
-          <div className="selected-service-list-item">
-            <span>
-            <img src="assets/oder-details/check-mark.svg" alt="" />
-            </span>
-            <p>Everything in Pro</p>
-          </div>
-        </div>
+      </div>
       </div>
     </div>
   );

@@ -8,14 +8,13 @@ import ChainUpSection from "../components/sections/ChainUpSection";
 import SongFly from "../components/sections/SongFly";
 import Recognized from "../components/sections/Recognized";
 import MarketingAgenchy from "../components/sections/MarketingAgenchy";
-import LinkedinSales from "../components/sections/LinkedinSales";
+import LinkedinSales from "../components/home/linkedinSales/LinkedinSales";
 
 import Faq from "react-faq-component";
 import ContactUs from "../components/sections/ContactUs";
-import Registration from "../components/sections/Registration";
-// import CountUp from "react-countup";
-// Images
-
+import Registration from "../components/home/registration/Registration";
+import Faqshow from "../components/Faq/Faqshow";
+import Image from "next/image";
 const Home = () => {
   const data = {
     rows: [
@@ -43,13 +42,14 @@ const Home = () => {
     rowTitleColor: "blue",
   };
   return (
-    
     <div id="home">
-      
       {/*  ================ Hero Section ==============*/}
       <div className="hero">
-        <div className="banner-wrapper"  data-aos="fade-up"
-            data-aos-duration="1000">
+        <div
+          className="banner-wrapper"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <div className="banner-inner">
             <div className="col">
               <div className="banner-content">
@@ -69,12 +69,7 @@ const Home = () => {
             </div>
             <div className="col">
               <div className="banner-right">
-              {/* <video
-                className="video-controls"
-                muted autoPlay loop
-                src="https://res.cloudinary.com/dne6hxmao/video/upload/v1684137120/Music%20Promotion%20Today/Hover_Animation_pm5pti.mp4"
-              ></video> */}
-              <img src="assets/home-1/img/hero-img.gif" alt="" />
+                <Image src="/assets/home-1/img/hero-img.gif" alt="music promotion today" width={953} height={711} />
               </div>
             </div>
           </div>
@@ -97,16 +92,7 @@ const Home = () => {
       {/* =============== Linkedin Sales ================== */}
       <LinkedinSales />
       {/*  ============== Faq Section start ============== */}
-      <section id="faq">
-        <div className="container">
-          <h1 className="heading" data-aos="fade-up"
-        data-aos-duration="1000">Frequently Asked Questions</h1>
-          <div className="content" data-aos="fade-up"
-        data-aos-duration="1000">
-            <Faq data={data} styles={styles} />
-          </div>
-        </div>
-      </section>
+      <Faqshow />
       {/* ============  Contact Us ===================== */}
       <ContactUs />
       {/* ============  Resgistration =================== */}

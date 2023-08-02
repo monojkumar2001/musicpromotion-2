@@ -1,4 +1,5 @@
 import React from "react";
+import FollowerCard from "../home/followerItem/FollowerCard";
 
 function Follower({ type = "one" }) {
   return (
@@ -16,27 +17,27 @@ function Follower({ type = "one" }) {
           <div className="follower-card-items">
             <div className="follower-card-item" data-aos="fade-up"
             data-aos-duration="1000">
-                <div className="follower-icon-img">
-                <img src="/assets/home-2/img/follower-icon-1.svg" alt="" />
-                </div>
-                 <h4>Provide Your Information</h4>
-                 <p>Launching  a new NFT DeFi Or fintech start up? Do you need a complete technical and marketing  support? T</p>
+                <FollowerCard 
+                img='/assets/home-2/img/follower-icon-1.svg'
+                title='Provide Your Information'
+                description='Launching  a new NFT DeFi Or fintech start up? Do you need a complete technical and marketing  support?'
+                />
             </div>
             <div className="follower-card-item" data-aos="fade-up"
             data-aos-duration="1500">
-                <div className="follower-icon-img">
-                <img src="/assets/home-2/img/follower-icon-2.svg" alt="" />
-                </div>
-                 <h4>Provide Your Information</h4>
-                 <p>Launching  a new NFT DeFi Or fintech start up? Do you need a complete technical and marketing  support? T</p>
+              <FollowerCard 
+                img='/assets/home-2/img/follower-icon-2.svg'
+                title='Provide Your Information'
+                description='Launching  a new NFT DeFi Or fintech start up? Do you need a complete technical and marketing  support?'
+                />
             </div>
             <div className="follower-card-item follower-card-item-before-remove" data-aos="fade-up"
             data-aos-duration="2000">
-                <div className="follower-icon-img">
-                <img src="/assets/home-2/img/follower-icon-3.svg" alt="" />
-                </div>
-                 <h4>Provide Your Information</h4>
-                 <p>Launching  a new NFT DeFi Or fintech start up? Do you need a complete technical and marketing  support? T</p>
+                    <FollowerCard 
+                img='/assets/home-2/img/follower-icon-3.svg'
+                title='Provide Your Information'
+                description='Launching  a new NFT DeFi Or fintech start up? Do you need a complete technical and marketing  support?'
+                />
             </div>
           </div>
         </div>

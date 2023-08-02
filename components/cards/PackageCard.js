@@ -1,30 +1,33 @@
 import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
-const PackageCard = ({
-  package_type,
-  cur_price,
-  package_lead,
-  includes,
-  details,
-  package_dis,
-  index,
-  sliderValue,
-}) => {
+const PackageCard = ({item,sliderValue,image,title}) => {
+
+ const chooseOption = () => {
+    localStorage.setItem('service_id',item.package_id);
+    localStorage.setItem('service_title',title);
+    localStorage.setItem('service_image',image);
+    localStorage.setItem('slider_value',sliderValue);
+    localStorage.setItem('unit_price',item.cur_price);
+    localStorage.setItem('service_price',(item.cur_price * sliderValue) - (item.cur_price * sliderValue ) * (sliderValue > 1 ? 20 : 0)/100);
+ }
+
   return (
     <div className="package-card">
       <div className="package-type">
-        <h4>{package_type}</h4>
-        <p>{package_dis}</p>
+        <h4>{item.package_type}</h4>
+        {/* <p>{item.cur_price}</p> */}
       </div>
       <div className="pricing-info">
-        <p className="price">${cur_price * sliderValue}</p>
-        <p>Per Month</p>
+        <p className="price">${(item.cur_price * sliderValue) - (item.cur_price * sliderValue ) * (sliderValue > 1 ? 20 : 0)/100}</p>
+        <p>{item.price}</p>
 
-        <div className="package_lead">{package_lead} Lead/month</div>
+        <div className="package_lead">{item.lead}</div>
       </div>
       <ul className="upper-details">
-        {includes.map((item) => (
-          <li key={item} className="list-item">
+        {item.includes.map((item,i) => (
+          <li key={i} className="list-item">
             <svg
               width="24"
               height="24"
@@ -43,13 +46,13 @@ const PackageCard = ({
           </li>
         ))}
       </ul>
-      <a
-        href="https://wa.me/13025977087"
+      <Link
+        href="/order-details"
         target={"_blank"}
-        className="purchase-btn"
+       
       >
-        Purchase
-      </a>
+       <button className="purchase-btn" onClick={chooseOption}> Purchase</button>
+      </Link>
     </div>
   );
 };

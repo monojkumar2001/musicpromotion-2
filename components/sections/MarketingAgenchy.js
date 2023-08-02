@@ -1,3 +1,4 @@
+import Image from 'next/image';
 const MarketingAgenchy = ({ data, type = "one" }) => {
     return (
         <div className="services">
@@ -9,24 +10,24 @@ const MarketingAgenchy = ({ data, type = "one" }) => {
           <div className="services-wrapper Agenchy-items">
             <div className="Agenchy-item" data-aos="fade-up"
         data-aos-duration="1000">
-            <img src="/assets/home-1/img/marketing-1.svg" alt="" />
+            <Image src="/assets/home-1/img/marketing-1.svg" alt="music promotion today" width={213} height={84} />
             </div>
             <div className="Agenchy-item" data-aos="fade-up"
         data-aos-duration="1500">
-            <img src="/assets/home-1/img/marketing-2.svg" alt="" />
+            <Image src="/assets/home-1/img/marketing-2.svg" alt="music promotion today" width={224} height={126} />
             </div>
             <div className="Agenchy-item" data-aos="fade-up"
         data-aos-duration="2000">
-            <img src="/assets/home-1/img/marketing-3.svg" alt="" />
+            <Image src="/assets/home-1/img/marketing-3.svg" alt="music promotion today" width={245} height={108} />
             </div>
             <div className="Agenchy-item" data-aos="fade-up"
         data-aos-duration="2500">
-            <img src="/assets/home-1/img/marketing-4.svg" alt="" />
+            <Image src="/assets/home-1/img/marketing-4.svg" alt="music promotion today" width={136} height={137} />
             </div>
           </div>
           <div className="agenchy-img" data-aos="fade-up"
         data-aos-duration="1000">
-          <img src="/assets/home-1/img/agenchy.svg" alt="" />
+          <Image src="/assets/home-1/img/agenchy.svg" alt="music promotion today" width={1434} height={266} />
           </div>
         </div>
       </div>

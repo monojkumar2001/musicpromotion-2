@@ -2,13 +2,26 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import LoginModal from "../modal/LoginModal";
 import Link from "next/link";
+import axios from "axios";
 
 function Header() {
   const [sidebarActive, setSidebarActive] = useState(false);
   const [navActive, setNavActive] = useState(false);
   const [dropdownActive, setDropdownActive] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [item, setItem] = useState('');
   const router = useRouter();
+  const { logout } = router.query;
+
+
+  useEffect(() => {
+    if (logout !== undefined) {
+      setItem('')
+		  }else{
+        setItem(localStorage.getItem('auth_token'))
+      }
+  }, [logout])
+
   useEffect(() => {
     router.events.on("routeChangeComplete", () => {
       setModalIsOpen(false);
@@ -40,6 +53,22 @@ function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const dashboard = () => {
+    window.location.href = "http://localhost:3001/";
+  };
+
+  // const logout = () => {
+  //   axios.post(`/api/logout`).then(res => {
+  //     if(res.data.status === 200){
+  //       localStorage.removeItem('auth_token');
+  //       localStorage.removeItem('user');
+  //       window.location.href = '/';
+  //     }
+  //   });
+  // }
+
+
   return (
     <>
       <nav className="navigation">
@@ -191,7 +220,7 @@ function Header() {
                                   <div className="icon-add">
                                     <svg
                                       width="30"
-                                      height=""
+                                      height="25"
                                       viewBox="0 0 18 12"
                                       fill="none"
                                       xmlns="http://www.w3.org/2000/svg"
@@ -232,22 +261,39 @@ function Header() {
                         <a className="nav-link">Contact</a>
                       </Link>
                     </li>
-
+                    {item ? 
+                    <ul className="nav-menu">
+                      <li className="nav-list" onClick={dashboard}>
+                          <a href="#" className="nav-link">Dashboard</a>
+                      </li> 
+                      {/* <li className="nav-list" onClick={logout}>
+                          <a href="#" className="nav-link">Logout</a>
+                      </li>  */}
+                    </ul>
+                    : 
+                    <li className="nav-list" onClick={_toggleSidebar}>
+                      <Link href={"/login"}>
+                        <a href="#" className="nav-link">Login</a>
+                      </Link>
+                    </li>
+                    }
                     {/* ========= sign up btn =============== */}
-                    {/* <button className="profile-btn" onClick={handleModal}>
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M20 22H4V20C4 18.6739 4.52678 17.4021 5.46447 16.4645C6.40215 15.5268 7.67392 15 9 15H15C16.3261 15 17.5979 15.5268 18.5355 16.4645C19.4732 17.4021 20 18.6739 20 20V22ZM12 13C11.2121 13 10.4319 12.8448 9.7039 12.5433C8.97595 12.2417 8.31451 11.7998 7.75736 11.2426C7.20021 10.6855 6.75825 10.0241 6.45672 9.2961C6.15519 8.56815 6 7.78793 6 7C6 6.21207 6.15519 5.43185 6.45672 4.7039C6.75825 3.97595 7.20021 3.31451 7.75736 2.75736C8.31451 2.20021 8.97595 1.75825 9.7039 1.45672C10.4319 1.15519 11.2121 1 12 1C13.5913 1 15.1174 1.63214 16.2426 2.75736C17.3679 3.88258 18 5.4087 18 7C18 8.5913 17.3679 10.1174 16.2426 11.2426C15.1174 12.3679 13.5913 13 12 13Z"
-                          fill="white"
-                        />
-                      </svg>
-                    </button> */}
+                    {/* <Link href={"/login"}>
+                      <button href={"/login"} className="profile-btn">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M20 22H4V20C4 18.6739 4.52678 17.4021 5.46447 16.4645C6.40215 15.5268 7.67392 15 9 15H15C16.3261 15 17.5979 15.5268 18.5355 16.4645C19.4732 17.4021 20 18.6739 20 20V22ZM12 13C11.2121 13 10.4319 12.8448 9.7039 12.5433C8.97595 12.2417 8.31451 11.7998 7.75736 11.2426C7.20021 10.6855 6.75825 10.0241 6.45672 9.2961C6.15519 8.56815 6 7.78793 6 7C6 6.21207 6.15519 5.43185 6.45672 4.7039C6.75825 3.97595 7.20021 3.31451 7.75736 2.75736C8.31451 2.20021 8.97595 1.75825 9.7039 1.45672C10.4319 1.15519 11.2121 1 12 1C13.5913 1 15.1174 1.63214 16.2426 2.75736C17.3679 3.88258 18 5.4087 18 7C18 8.5913 17.3679 10.1174 16.2426 11.2426C15.1174 12.3679 13.5913 13 12 13Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </button>
+                    </Link> */}
                   </ul>
                 </div>
               </div>

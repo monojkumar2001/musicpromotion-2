@@ -10,11 +10,12 @@ import HowItWork from "../components/sections/HowItWork";
 import Agencies from "../components/sections/Agencies";
 import Follower from "../components/sections/Follower";
 import ContactUs from "../components/sections/ContactUs";
-import Registration from "../components/sections/Registration";
-import LinkedinSales from "../components/sections/LinkedinSales";
+import Registration from "../components/home/registration/Registration";
+import LinkedinSales from "../components/home/linkedinSales/LinkedinSales";
 import Faq from "react-faq-component";
 import SongFly from "../components/sections/SongFly";
-
+import Faqshow from "../components/Faq/Faqshow"
+import Image from "next/image";
 // Images
 
 const Page1 = () => {
@@ -75,14 +76,14 @@ const Page1 = () => {
                     <h4>15.7k</h4>
                     <p>New Followers</p>
                   </div>
-                  <img src="/assets/home-1/img/2.png" alt="" />
+                  <Image width={240} height={208} src="/assets/home-1/img/2.png" alt="" />
                 </div>
-                <img
+                <Image width={169} height={63}
                   src="/assets/home-1/img/3.png"
                   alt=""
                   className="animated ban-b"
                 />
-                <img
+                <Image width={107} height={103}
                   src="/assets/home-1/img/4.png"
                   alt=""
                   className="animated ban-c"
@@ -97,7 +98,7 @@ const Page1 = () => {
                       <p>New Growth</p>
                       <h4>6,000</h4>
                     </div>
-                    <img
+                    <Image width={61} height={61}
                       src="/assets/home-1/img/5.png"
                       className="joiner-img"
                     />
@@ -110,12 +111,12 @@ const Page1 = () => {
                     <p>years of Experience </p>
                   </div>
                 </div>
-                <img
+                <Image width={70} height={64}
                   src="/assets/home-1/img/7.png"
                   alt=""
                   className="animated ban-f"
                 />
-                <img
+                <Image width={419} height={557}
                   src="/assets/home-1/img/1.png"
                   alt=""
                   className="ban-image"
@@ -148,14 +149,7 @@ const Page1 = () => {
       {/* =============== Linkedin Sales ================== */}
       <LinkedinSales />
       {/*  ========= Faq Section start ======== */}
-      <section id="faq">
-        <div className="container">
-          <h1 className="heading">Frequently Asked Questions</h1>
-          <div className="content">
-            <Faq data={data} styles={styles} />
-          </div>
-        </div>
-      </section>
+      <Faqshow />
       {/* ============  Contact Us ===================== */}
       <ContactUs />
       {/* ============  Resgistration =================== */}

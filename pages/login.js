@@ -2,9 +2,18 @@ import AppLayout from "../components/layout/AppLayout";
 import React from "react";
 import { useState } from "react";
 import Link from "next/link";
+import axios from "axios";
+import { useRouter } from "next/router";
+import { ColorRing } from 'react-loader-spinner'
+
+
 
 const LoginPage = () => {
+
+	const [spinner, setSpinner] = useState(false);
 	const [type, setType] = useState("password");
+    const { push } = useRouter();
+
 	const toggleType = () => {
 		if (type === "text") {
 			setType("password");
@@ -12,6 +21,54 @@ const LoginPage = () => {
 			setType("text");
 		}
 	};
+
+	const [inputValue,setInputValue] = useState({
+        email : '',
+        password : '',
+        decline : '',
+        error_log : []
+    })
+
+	const handleInput = (e) => {
+        setInputValue({
+        ...inputValue,
+        [e.target.name] : e.target.value
+        })
+    }
+
+	const submitForm = (e) => {
+        e.preventDefault();
+		setSpinner(true)
+		setInputValue({
+		...inputValue,
+		error_log : []
+		})
+        axios.post('api/login',inputValue).then(res => {
+          if(res.data.status === 200){
+			setSpinner(false)
+            console.log(res.data.data)
+            localStorage.setItem('auth_token',res.data.token);
+			window.location.href = 'http://localhost:3001?token='+res.data.token;
+          }else if(res.data.status === 401){
+            setInputValue({
+				...inputValue,
+				decline : res.data.message,
+				error_log : []
+				})
+			setSpinner(false)
+          }else{
+			setSpinner(false)
+            setInputValue( {
+              ...inputValue,
+			  decline : '',
+              error_log : res.data.data
+            })
+          }
+        }).catch(err => err)
+    }
+
+	
+
 
 	return (
 		<div className="login">
@@ -26,7 +83,21 @@ const LoginPage = () => {
 					{/* Log<span className="focus">in</span> */}
 					Sign In
 				</h1>
-				<form className="login-form">
+				{
+					spinner ? <ColorRing
+					visible={true}
+					height="80"
+					width="80"
+					ariaLabel="blocks-loading"
+					wrapperStyle={{}}
+					wrapperClass="blocks-wrapper"
+					colors={['#e15b64', '#f47e60', '#f8b26a', '#abbd81', '#849b87']}
+				/> : ''
+				}
+				<h5 style={ {textAlign:'center'}}>
+				<small style={{ color:'red' }}>{inputValue.decline}</small>
+				</h5>
+				<form className="login-form" onSubmit={submitForm}>
 					<div className="form-field">
 						<label htmlFor="name">Email</label>
 						<input
@@ -34,7 +105,11 @@ const LoginPage = () => {
 							name="email"
 							id="email"
 							placeholder="yourusername@example.com"
+							error={inputValue.error_log.email} 
+							value={inputValue.email} 
+							onChange={handleInput}
 						/>
+						<small style={{ color:'red' }}>{inputValue.error_log.email}</small>
 					</div>
 					<div className="form-field">
 						<label htmlFor="email">Password</label>
@@ -44,7 +119,10 @@ const LoginPage = () => {
 								name="password"
 								id="password"
 								placeholder="Enter password"
+								value={inputValue.password} 
+								error={inputValue.error_log.password} onChange={handleInput}
 							/>
+							<small style={{ color:'red' }}>{inputValue.error_log.password}</small>
 							<span className="typechange" onClick={toggleType}>
 								{type === "password" ? (
 									<svg
@@ -70,8 +148,8 @@ const LoginPage = () => {
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
+											fillRule="evenodd"
+											clipRule="evenodd"
 											d="M0.0906035 6.16123C-0.03875 5.90299 -0.0290678 5.5987 0.116259 5.34909C1.50003 2.9724 5.49132 -0.85906 12.1823 0.172585C14.2365 0.683024 18.5305 2.41236 19.9297 5.35375C20.0472 5.60065 20.0328 5.88692 19.8977 6.12461C18.5396 8.51371 14.5588 12.4065 7.81569 11.4009C5.86928 11.0017 1.71635 9.40692 0.0906035 6.16123ZM10.1952 10.3873C12.779 10.3873 14.8737 8.29263 14.8737 5.70878C14.8737 3.12492 12.779 1.03029 10.1952 1.03029C7.61133 1.03029 5.5167 3.12492 5.5167 5.70878C5.5167 8.29263 7.61133 10.3873 10.1952 10.3873Z"
 											fill="#565656"
 										/>
@@ -92,10 +170,10 @@ const LoginPage = () => {
 				</p>
 				<div className="social-auths">
 					<div className="google">
-						<img src="/assets/icons/google.png" alt="" srcset="" />
+						<img src="/assets/icons/google.png" alt="" srcSet="" />
 					</div>
 					<div className="facebook">
-						<img src="/assets/icons/facebook.png" alt="" srcset="" />
+						<img src="/assets/icons/facebook.png" alt="" srcSet="" />
 					</div>
 				</div>
 				<p className="redirect">

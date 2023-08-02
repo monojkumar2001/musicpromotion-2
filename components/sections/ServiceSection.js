@@ -1,3 +1,4 @@
+import Image from "next/image";
 const ServiceSection = ({ data, type = "one" }) => {
   return (
     <section>
@@ -17,11 +18,11 @@ const ServiceSection = ({ data, type = "one" }) => {
             </div>
           </div>
 
-          <div className="service-wrapper mt-3">
+          <div className="service-wrapper ">
             <div className="service-card" data-aos="fade-up"
             data-aos-duration="1000">
               <div className="service-agency-img">
-              <img src="/assets/home-2/img/agenchy-img-1.svg" alt="" />
+              <Image width={226} height={320} src="/assets/home-2/img/agenchy-img-1.svg" alt="Music Promotion Today" />
               </div>
               <div className="service-details">
                 <h4>Targeted Campaigns</h4>
@@ -34,7 +35,7 @@ const ServiceSection = ({ data, type = "one" }) => {
             <div className="service-card service-card-middle" data-aos="fade-up"
             data-aos-duration="1500">
               <div className="service-agency-img">
-              <img src="/assets/home-2/img/agenchy-img-2.svg" alt="" />
+              <Image width={189} height={351} src="/assets/home-2/img/agenchy-img-2.svg" alt="Music Promotion Today" />
               </div>
               <div className="service-details">
                 <h4>Earn Royalties</h4>
@@ -46,7 +47,7 @@ const ServiceSection = ({ data, type = "one" }) => {
             <div className="service-card" data-aos="fade-up"
             data-aos-duration="2000">
               <div className="service-agency-img">
-              <img src="/assets/home-2/img/agenchy-img-3.svg" alt="" />
+              <Image width={244} height={347}  src="/assets/home-2/img/agenchy-img-3.svg" alt="Music Promotion Today" />
               </div>
               <div className="service-details">
                 <h4>Scalable Solutions</h4>

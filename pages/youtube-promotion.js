@@ -10,38 +10,14 @@ import HowItWork from "../components/sections/HowItWork";
 import Agencies from "../components/sections/Agencies";
 import Follower from "../components/sections/Follower";
 import ContactUs from "../components/sections/ContactUs";
-import Registration from "../components/sections/Registration";
-import LinkedinSales from "../components/sections/LinkedinSales";
+import Registration from "../components/home/registration/Registration";
+import LinkedinSales from "../components/home/linkedinSales/LinkedinSales";
 import Faq from "react-faq-component";
 import SongFly from "../components/sections/SongFly";
-
+import Faqshow from "../components/Faq/Faqshow";
+import Image from "next/image";
 const Page4 = () => {
-  // =========== Faq Question Data ===================
-  const data = {
-    rows: [
-      {
-        title: "Metaverse development: what is it?",
-        content: `You can design your own virtual world setting to hold conventions, meetings, seminars, concerts, or even to start your own real-world company there.`,
-      },
-      {
-        title: "How much does our metaverse development service cost?",
-        content: `To get a price on your metaverse development project, get in touch with our team. Your specified features, functionalities, and other factors will affect the price. `,
-      },
-      {
-        title: "What are the benefits of investing in metaverse platforms?",
-        content: `Experts claim that the metaverse has a trillion-dollar industry thus has a promising future. If you work in such a growing field, you will be noticed by others. Be a pioneer in the field!`,
-      },
-      {
-        title: "What can a metaverse development company do for you?",
-        content: `What can a metaverse development company do for you?`,
-      },
-    ],
-  };
 
-  const styles = {
-    titleTextColor: "blue",
-    rowTitleColor: "blue",
-  };
   return (
     <div id="page4">
       <div className="banner-container">
@@ -68,9 +44,9 @@ const Page4 = () => {
             <div className="col">
               <div className="banner-right">
                 <div className="animated ban-a">
-                  <img src="/assets/home-14/img/2.png" alt="" />
+                  <Image width={250} height={107} src="/assets/home-14/img/2.png" alt="" />
                 </div>
-                <img src="/assets/home-14/img/1.png" alt="" />
+                <Image width={605} height={484} src="/assets/home-14/img/1.png" alt="" />
               </div>
             </div>
           </div>
@@ -78,13 +54,13 @@ const Page4 = () => {
       </div>
 
    {/* =============== Service Section ================= */}
-   <ServiceSection type="four" />
+      <ServiceSection type="four" />
       {/* =============== Vision Section ================== */}
       <VisionSection type="four" />
       {/* =============== About Section =================== */}
       <AboutSection type="two" />
       {/* =============== Pricing Section ================= */}
-      <PricingSection data={pricingData} type="four" />
+      <PricingSection type="four" image="/assets/home-14/img/1.png" title="Targeted Youtube Promotion"/>
       {/* =============== Image Section =================== */}
       <ImageSection type="four" />
       {/* =============== Engage Section ================== */}
@@ -100,14 +76,7 @@ const Page4 = () => {
       {/* =============== Linkedin Sales ================== */}
       <LinkedinSales type="four" />
       {/*  ========= Faq Section start ======== */}
-      <section id="faq">
-        <div className="container">
-          <h1 className="heading">Frequently Asked Questions</h1>
-          <div className="content">
-            <Faq data={data} styles={styles} />
-          </div>
-        </div>
-      </section>
+      <Faqshow />
       {/* ============  Contact Us ===================== */}
       <ContactUs type="four" />
       {/* ============  Resgistration =================== */}
@@ -136,7 +105,7 @@ const pricingData = [
   },
   {
     package_type: "Standard",
-    cur_price: "119",
+    cur_price: "200",
     off_price: "239",
     percent: "50",
     includes: [
@@ -167,7 +136,7 @@ const pricingData = [
     ],
     details:
       "Engagement may vary.*Typical engagements on average 50,000 streams and 10000 followers organically",
-  },
+  }
 ];
 
 Page4.title = "Music Promotion Home";

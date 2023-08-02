@@ -1,3 +1,4 @@
+import Image from "next/image";
 const VisionSection = ({ type = "" }) => {
 	return (
 		<section id="vision" className={`type-${type}`}>
@@ -16,7 +17,7 @@ const VisionSection = ({ type = "" }) => {
 
 					<div className="vision-right" data-aos="fade-up"
             data-aos-duration="1000">
-						<img src="/assets/img/4.svg" alt="" />
+						<Image width={821} height={640} src="/assets/img/4.svg" alt="Music Promotion Today" />
 					</div>
 				</div>
 			</div>

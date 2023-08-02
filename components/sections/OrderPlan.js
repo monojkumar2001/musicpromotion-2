@@ -1,6 +1,6 @@
 import React from "react";
 
-function OrderPlan() {
+function OrderPlan({ items }) {
   return (
     <>
       <div className="order-plan-wrapper">
@@ -11,7 +11,7 @@ function OrderPlan() {
           </div>
           <div className="oder-plan-item">
             <h5 className="order-plan-foucs">Change Plan</h5>
-            <h4>$998.00</h4>
+            <h4>${items.service_price}</h4>
           </div>
         </div>
         <div className="order-multimedia">
@@ -31,23 +31,21 @@ function OrderPlan() {
             </svg>
             Web and App Designer
           </span>
-          <div className="order-apply-btn">
-            <button>
-              <p>promo</p>
-              <span>APPLY</span>
-            </button>
+          <div className="order-apply-btn mt-3 d-flex algin-items-center">
+            <input type="text" />
+            <button>APPLY</button>
           </div>
         </div>
         <div className="order-subtotal-item">
           <p>Subtotal</p>
           <p>
-            $<span>799</span>/mo
+            $<span>{items.service_price}</span>/mo
           </p>
         </div>
         <div className="order-total-item">
           <p>Total (USD)</p>
           <p>
-            <span>$799</span>
+            <span>${items.service_price}</span>
           </p>
         </div>
       </div>

@@ -1,5 +1,69 @@
-import React from "react";
+import React,{useState} from "react";
+import axios from "axios";
+import { useRouter } from "next/router";
+import Swal from "sweetalert2";
+
+
+
 const Registration = () => {
+  const { push } = useRouter();
+  const [inputField, setInputField] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    company: "",
+    site: "",
+    error_log : []
+  });
+  const inputsHandler = (e) => {
+    e.persist();
+    setInputField({
+      ...inputField,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const allInfoSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("first_name", inputField.first_name);
+    formData.append("last_name", inputField.last_name);
+    formData.append("email", inputField.email);
+    formData.append("phone", inputField.phone);
+    formData.append("company", inputField.company);
+    formData.append("site", inputField.site);
+    axios
+      // .post("https://api.nftconstructer.com/api/demo", formData)
+      .post("api/contact", formData)
+      .then((res) => {
+        if (res.data.status === 200) {
+          Swal.fire('Success',res.data.msg,'success')
+          setInputField({
+            first_name: "",
+            last_name: "",
+            email: "",
+            phone: "",
+            company: "",
+            site: "",
+            error_log : []
+          });
+          // push('/v1/thankYou');
+        } else if(res.data.status == 203){
+          setInputField( {
+            ...inputField,
+            botSubmit : res.data.data
+          })
+        }else {
+          setInputField( {
+            ...inputField,
+            error_log : res.data.error
+          })
+        }
+      });
+  };
+
+
   return (
     <>
       <div className="registration-input">
@@ -24,8 +88,8 @@ const Registration = () => {
                       <path
                         d="M2 7L7.5 12.5L18 2"
                         stroke="#04AA33"
-                        stroke-width="3"
-                        stroke-linecap="round"
+                        strokeWidth="3"
+                        strokeLinecap="round"
                       ></path>
                     </svg>
                     <p>
@@ -44,8 +108,8 @@ const Registration = () => {
                       <path
                         d="M2 7L7.5 12.5L18 2"
                         stroke="#04AA33"
-                        stroke-width="3"
-                        stroke-linecap="round"
+                        strokeWidth="3"
+                        strokeLinecap="round"
                       ></path>
                     </svg>
                     <p>
@@ -64,8 +128,8 @@ const Registration = () => {
                       <path
                         d="M2 7L7.5 12.5L18 2"
                         stroke="#04AA33"
-                        stroke-width="3"
-                        stroke-linecap="round"
+                        strokeWidth="3"
+                        strokeLinecap="round"
                       ></path>
                     </svg>
                     <p>
@@ -84,8 +148,8 @@ const Registration = () => {
                       <path
                         d="M2 7L7.5 12.5L18 2"
                         stroke="#04AA33"
-                        stroke-width="3"
-                        stroke-linecap="round"
+                        strokeWidth="3"
+                        strokeLinecap="round"
                       ></path>
                     </svg>
                     <p>
@@ -104,8 +168,8 @@ const Registration = () => {
                       <path
                         d="M2 7L7.5 12.5L18 2"
                         stroke="#04AA33"
-                        stroke-width="3"
-                        stroke-linecap="round"
+                        strokeWidth="3"
+                        strokeLinecap="round"
                       ></path>
                     </svg>
                     <p>
@@ -151,35 +215,41 @@ const Registration = () => {
             <div className="registration_right" data-aos="fade-up"
         data-aos-duration="1500">
               <div className="registration_right_box">
-                <form action="">
+                <form onSubmit={allInfoSubmit}>
                   <div className="form_email">
                     <label>First Name</label>
-                    <input type="text" placeholder="E.g . Buzz" />
+                    <input type="text" placeholder="E.g . Buzz" name="first_name"  onChange={inputsHandler} value={inputField.first_name}/>
+                    <small style={{ color:'red' }}>{inputField.error_log.first_name}</small>
                   </div>
                   <div className="form_email">
                     <label>Last Name</label>
-                    <input type="text" placeholder="E.g . Aldrin" />
+                    <input type="text" placeholder="E.g . Aldrin" name="last_name"  onChange={inputsHandler} value={inputField.last_name}/>
+                    <small style={{ color:'red' }}>{inputField.error_log.last_name}</small>
                   </div>
                   <div className="form_email">
                     <label>Email</label>
-                    <input type="text" placeholder="E.g . buzz@nasa.gov" />
+                    <input type="text" placeholder="E.g . buzz@nasa.gov" name="email"  onChange={inputsHandler} value={inputField.email}/>
+                    <small style={{ color:'red' }}>{inputField.error_log.email}</small>
                   </div>
                   <div className="form_email">
                     <label>Company</label>
-                    <input type="text" placeholder="E.g . NASA" />
+                    <input type="text" placeholder="E.g . NASA" name="company"  onChange={inputsHandler} value={inputField.company}/>
+                    <small style={{ color:'red' }}>{inputField.error_log.company}</small>
                   </div>
                   <div className="form_companey form_email">
                     <label>Company Site</label>
-                    <select>
-                      <option value="">Select One</option>
-                      <option value="">Select One</option>
-                      <option value="">Select One</option>
-                      <option value="">Select One</option>
+                    <select name="site"  onChange={inputsHandler} value={inputField.site}>
+                      <option value="1">Select One</option>
+                      <option value="2">Select two</option>
+                      <option value="3">Select three</option>
+                      <option value="4">Select four</option>
                     </select>
+                    <small style={{ color:'red' }}>{inputField.error_log.site}</small>
                   </div>
                   <div className="form_email">
                     <label>Phone Number</label>
-                    <input type="text" placeholder="E.g 234 5678" />
+                    <input type="text" placeholder="E.g 234 5678" name="phone"  onChange={inputsHandler} value={inputField.phone}/>
+                    <small style={{ color:'red' }}>{inputField.error_log.phone}</small>
                   </div>
                   <div className="registration_right_box_disc">
                     <p>

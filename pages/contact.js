@@ -1,7 +1,58 @@
 import AppLayout from "../components/layout/AppLayout";
-import React from "react";
+import React,{useState,useEffect} from "react";
+import axios from "axios";
+import { useRouter } from "next/router";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+    const { push } = useRouter();
+    const [inputField, setInputField] = useState({
+      name: "",
+      email: "",
+      message: "",
+      error_log : []
+    });
+    const inputsHandler = (e) => {
+      e.persist();
+      setInputField({
+        ...inputField,
+        [e.target.name]: e.target.value,
+      });
+    };
+  
+    const allInfoSubmit = (e) => {
+      e.preventDefault();
+      const formData = new FormData();
+      formData.append("name", inputField.name);
+      formData.append("email", inputField.email);
+      formData.append("message", inputField.message);
+      axios
+        // .post("https://api.nftconstructer.com/api/demo", formData)
+        .post("api/second-contact", formData)
+        .then((res) => {
+          if (res.data.status === 200) {
+            Swal.fire('Success',res.data.msg,'success')
+            setInputField({
+              name: "",
+              message: "",
+              email: "",
+              error_log : []
+            });
+            // push('/v1/thankYou');
+          } else if(res.data.status == 203){
+            setInputField( {
+              ...inputField,
+              botSubmit : res.data.data
+            })
+          }else {
+            setInputField( {
+              ...inputField,
+              error_log : res.data.error
+            })
+          }
+        });
+    };
+  
 	return ( <>
           <div className="contact-header" data-aos="fade-up"
             data-aos-duration="1000">
@@ -45,7 +96,7 @@ const Contact = () => {
                 </div>
                 <div className='contact-right' data-aos="fade-up"
             data-aos-duration="1000">
-                <form className="contact-form">
+                <form className="contact-form" onSubmit={allInfoSubmit}>
                     <div className="form-field">
                         <label htmlFor="name">Your Name</label>
                         <div className="input-field">
@@ -53,12 +104,15 @@ const Contact = () => {
                                 <img src="/assets/contact/user.png"/>
                             </div>
                             <input
-                            type="email"
-                            name="email"
-                            id="email"
+                            type="text"
+                            name="name"
+                            id="name"
+                            onChange={inputsHandler} 
+                            value={inputField.name}
                             placeholder="Full name here"
                         />
                         </div>
+                        <small style={{ color:'red' }}>{inputField.error_log.name}</small>
                     </div>
                     <div className="form-field">
                         <label htmlFor="email">Your mail</label>
@@ -70,19 +124,26 @@ const Contact = () => {
                             type="email"
                             name="email"
                             id="email"
+                            onChange={inputsHandler} 
+                            value={inputField.email}
                             placeholder="Your email address"
                         />
                         </div>
+                        <small style={{ color:'red' }}>{inputField.error_log.email}</small>
                     </div>
                     <div className="form-field">
                         <label htmlFor="name">Message</label>
                         <textarea
+                            name="message"
                             rows="6"
                             placeholder="Type your message here"
+                            onChange={inputsHandler} 
+                            value={inputField.message}
                         />
+                        <small style={{ color:'red' }}>{inputField.error_log.message}</small>
                     </div>
                     {/* <button className="form-btn" type="submit">Send message</button> */}
-                    <a href="https://wa.me/13025977087" target={"_blank"} className="form-btn">Send message</a>
+                    <button type="submit" className="form-btn">Send message</button>
                  </form>
                 </div>
             </div>

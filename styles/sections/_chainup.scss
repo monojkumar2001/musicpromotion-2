@@ -51,22 +51,22 @@
         font-weight: 600;
         margin: 10px 0;
       }
-      .col-2:first-child {
+      .col-item:first-child {
         border-bottom: 1px solid #000;
         border-right: 1px solid #000;
       }
-      .col-2:nth-child(2) {
+      .col-item:nth-child(2) {
         border-bottom: 1px solid #000;
       }
-      .col-2:nth-child(3) {
+      .col-item:nth-child(3) {
         border-right: 1px solid #000;
       }
       @media screen and (max-width: 580px) {
         margin-top: 40;
         grid-template-columns: 1fr;
-        .col-2:first-child,
-        .col-2:nth-child(2),
-        .col-2:nth-child(3) {
+        .col-item:first-child,
+        .col-item:nth-child(2),
+        .col-item:nth-child(3) {
           border: none;
         }
       }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import BusinessItemCard from "../home/businesItem/BusinessItemCard";
 
 function HowItWork({ type = "one" }) {
   const [isHovering, setIsHovering] = useState(1);
@@ -6,8 +7,11 @@ function HowItWork({ type = "one" }) {
     <section className={`business-grow type-${type}`}>
       <div className="container">
         <div className="business-warrper">
-          <div className="business-left" data-aos="fade-up"
-            data-aos-duration="1000">
+          <div
+            className="business-left"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             <div
               className={
                 isHovering === 1 ? "business-items active" : "business-items"
@@ -17,14 +21,12 @@ function HowItWork({ type = "one" }) {
               <div className="business-item numbering">
                 <span>01</span>
               </div>
-              <div className="business-item">
-                <h3>Fill in your brief</h3>
-                <p>
-                  Launching  a new NFT DeFi Or fintech start up? Do you need a
-                  complete technical and marketing support? Tell us exactly what
-                  you need, and then leave the hard work to us.
-                </p>
-              </div>
+              <BusinessItemCard
+                title="Fill in your brief"
+                description=" Launching  a new NFT DeFi Or fintech start up? Do you need a
+              complete technical and marketing support? Tell us exactly what
+              you need, and then leave the hard work to us."
+              />
             </div>
             <div
               className={
@@ -32,16 +34,14 @@ function HowItWork({ type = "one" }) {
               }
               onMouseOver={() => setIsHovering(2)}
             >
-              <div className="business-item numbering ">
+              <div className="business-item numbering">
                 <span>02</span>
               </div>
-              <div className="business-item">
-                <h3>Get confirmation</h3>
-                <p>
-                  Our allotted team will make a wire-frame first, then we will
-                  show it to you for final confirmation.
-                </p>
-              </div>
+              <BusinessItemCard
+                title="Get confirmation"
+                description="Our allotted team will make a wire-frame first, then we will
+              show it to you for final confirmation."
+              />
             </div>
             <div
               className={
@@ -52,24 +52,21 @@ function HowItWork({ type = "one" }) {
               <div className="business-item numbering before-none">
                 <span>03</span>
               </div>
-              <div className="business-item">
-                <h3>Manage your team</h3>
-                <p>
-                  Our developers will start working to make the whole website
-                  functional with all the required designs and functionalities
-                  according to your given requirements.
-                </p>
-              </div>
+              <BusinessItemCard
+                title="Manage your team"
+                description="Our developers will start working to make the whole website
+              functional with all the required designs and functionalities
+              according to your given requirements."
+              />
             </div>
           </div>
-          <div className="business-right" data-aos="fade-up"
-            data-aos-duration="1000">
+          <div
+            className="business-right"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
             <div className="business-img">
-              <video
-                className="video-controls"
-                controls
-                src=""
-              ></video>
+              <video className="video-controls" controls src=""></video>
             </div>
             <div className="business-btn">
               <button>How it works</button>

@@ -1,6 +1,7 @@
 import AppLayout from "../components/layout/AppLayout";
 import { useState } from "react";
 import Link from "next/link";
+import axios from "axios";
 
 const RegistrationPage = () => {
 	const [type, setType] = useState("password");
@@ -11,6 +12,46 @@ const RegistrationPage = () => {
 			setType("text");
 		}
 	};
+	const [inputValue,setInputValue] = useState({
+        name : '',
+        email : '',
+        phone : '',
+        password : '',
+        password_confirmation : '',
+        decline : '',
+        error_log : []
+    })
+
+	const handleInput = (e) => {
+        setInputValue({
+        ...inputValue,
+        [e.target.name] : e.target.value
+        })
+    }
+
+	const submitForm = (e) => {
+        e.preventDefault();
+		let formData = new FormData();
+		formData.append('name',inputValue.name);
+		formData.append('email',inputValue.email);
+		formData.append('phone',inputValue.phone);
+		formData.append('password',inputValue.password);
+		formData.append('password_confirmation',inputValue.password_confirmation);
+        axios.post('api/register',formData).then(res => {
+          if(res.data.status === 200){
+            localStorage.setItem('auth_token',res.data.token);
+			localStorage.setItem('user',JSON.stringify(res.data.data));
+			window.location.href = '/';
+          }else{
+            setInputValue( {
+              ...inputValue,
+			  decline : '',
+              error_log : res.data.data
+            })
+          }
+        }).catch(err => err)
+    }
+
 
 	return (
 		<div className="registration">
@@ -24,25 +65,59 @@ const RegistrationPage = () => {
 				<h1 className="heading">
 				Sign Up
 				</h1>
-				<form className="registration-form">
+				<h5 style={ {textAlign:'center'}}>
+				<small style={{ color:'red' }}>{inputValue.decline}</small>
+				</h5>
+				<form className="registration-form" onSubmit={submitForm}>
 					<div className="form-field">
-						<label htmlFor="name">Email</label>
+						<label htmlFor="name" style={{ color:'black' }}>Name</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							placeholder="Mathew Hyden"
+							value={inputValue.name} 
+							onChange={handleInput}
+						/>
+						<small style={{ color:'red' }}>{inputValue.error_log.name}</small>
+					</div>
+					
+					<div className="form-field">
+						<label htmlFor="email" style={{ color:'black' }}>Email</label>
 						<input
 							type="email"
 							name="email"
 							id="email"
 							placeholder="yourusername@example.com"
+							value={inputValue.email} 
+							onChange={handleInput}
 						/>
+						<small style={{ color:'red' }}>{inputValue.error_log.email}</small>
 					</div>
 					<div className="form-field">
-						<label htmlFor="email">Password</label>
+						<label htmlFor="phone" style={{ color:'black' }}>Phone</label>
+						<input
+							type="text"
+							name="phone"
+							id="phone"
+							placeholder="1-800-XX-YYYY"
+							value={inputValue.phone} 
+							onChange={handleInput}
+						/>
+						<small style={{ color:'red' }}>{inputValue.error_log.phone}</small>
+					</div>
+					<div className="form-field">
+						<label htmlFor="password" style={{ color:'black' }}>Password</label>
 						<div className="password-field">
 							<input
 								type={type}
 								name="password"
 								id="password"
 								placeholder="Enter password"
+								value={inputValue.password} 
+								onChange={handleInput}
 							/>
+							<small style={{ color:'red' }}>{inputValue.error_log.password}</small>
 							<span className="typechange" onClick={toggleType}>
 								{type === "password" ? (
 									<svg
@@ -68,8 +143,8 @@ const RegistrationPage = () => {
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
+											fillRule="evenodd"
+											clipRule="evenodd"
 											d="M0.0906035 6.16123C-0.03875 5.90299 -0.0290678 5.5987 0.116259 5.34909C1.50003 2.9724 5.49132 -0.85906 12.1823 0.172585C14.2365 0.683024 18.5305 2.41236 19.9297 5.35375C20.0472 5.60065 20.0328 5.88692 19.8977 6.12461C18.5396 8.51371 14.5588 12.4065 7.81569 11.4009C5.86928 11.0017 1.71635 9.40692 0.0906035 6.16123ZM10.1952 10.3873C12.779 10.3873 14.8737 8.29263 14.8737 5.70878C14.8737 3.12492 12.779 1.03029 10.1952 1.03029C7.61133 1.03029 5.5167 3.12492 5.5167 5.70878C5.5167 8.29263 7.61133 10.3873 10.1952 10.3873Z"
 											fill="#565656"
 										/>
@@ -79,14 +154,17 @@ const RegistrationPage = () => {
 						</div>
 					</div>
 					<div className="form-field">
-						<label htmlFor="email">Confirm Password</label>
+						<label htmlFor="password" style={{ color:'black' }}>Confirm Password</label>
 						<div className="password-field">
 							<input
 								type={type}
-								name="password"
+								name="password_confirmation"
 								id="password"
-								placeholder="Enter password"
+								placeholder="Confirm password"
+								value={inputValue.password_confirmation} 
+								onChange={handleInput}
 							/>
+							<small style={{ color:'red' }}>{inputValue.error_log.password}</small>
 							<span className="typechange" onClick={toggleType}>
 								{type === "password" ? (
 									<svg
@@ -112,8 +190,8 @@ const RegistrationPage = () => {
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											fill-rule="evenodd"
-											clip-rule="evenodd"
+											fillRule="evenodd"
+											clipRule="evenodd"
 											d="M0.0906035 6.16123C-0.03875 5.90299 -0.0290678 5.5987 0.116259 5.34909C1.50003 2.9724 5.49132 -0.85906 12.1823 0.172585C14.2365 0.683024 18.5305 2.41236 19.9297 5.35375C20.0472 5.60065 20.0328 5.88692 19.8977 6.12461C18.5396 8.51371 14.5588 12.4065 7.81569 11.4009C5.86928 11.0017 1.71635 9.40692 0.0906035 6.16123ZM10.1952 10.3873C12.779 10.3873 14.8737 8.29263 14.8737 5.70878C14.8737 3.12492 12.779 1.03029 10.1952 1.03029C7.61133 1.03029 5.5167 3.12492 5.5167 5.70878C5.5167 8.29263 7.61133 10.3873 10.1952 10.3873Z"
 											fill="#565656"
 										/>

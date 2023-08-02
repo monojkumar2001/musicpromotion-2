@@ -1,4 +1,5 @@
 import AppLayout from "../components/layout/AppLayout";
+import Image from "next/image";
 const AboutUs = () => {
 	return (
         
@@ -17,7 +18,7 @@ const AboutUs = () => {
                        <div className="about-us-left" data-aos="fade-up"
             data-aos-duration="1000">
                             <div className="about-us-img">
-                            <img src="/assets/agency/agency-1.png" alt="" />
+                            <Image width={412} height={679} src="/assets/agency/agency-1.png" alt="" />
                             </div>
                        </div>
                        <div className="about-us-right" data-aos="fade-up"
@@ -56,7 +57,7 @@ const AboutUs = () => {
                        <div className="about-us-left" data-aos="fade-up"
             data-aos-duration="1500">
                             <div className="about-us-img">
-                            <img src="/assets/agency/agency-2.png" alt="" />
+                            <Image width={508} height={569} src="/assets/agency/agency-2.png" alt="" />
                             </div>
                        </div>
                         
